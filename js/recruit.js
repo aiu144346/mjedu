@@ -84,6 +84,18 @@ document.addEventListener("DOMContentLoaded", () => {
       if (partyStatusSelect && partyStatusSelect.value.includes("비당원")) {
         partyStatusSelect.value = "권리당원 (당비 납부 당원)";
       }
+    } else if (selectedRole === "더민주 AI 크리에이터") {
+      dynamicNotice.innerHTML = `
+        💡 <strong>[더민주 AI 크리에이터 지원 안내]</strong> <strong>일반당원 또는 권리당원(울산 거주·연고)</strong>을 대상으로 하며, 울산시당 AI 강좌 보조강사 및 전문 강사 양성과정에 우선 선발되어 활동하게 됩니다.
+      `;
+      duesConsentText.innerHTML = `
+        [더민주 AI 크리에이터] 교육연수위원회의 AI 강좌 보조강사 및 강사 양성과정 활동에 성실히 참여할 것에 동의합니다. <span style="color:#DC2626;">(필수)</span>
+      `;
+      if (duesConsentBox) duesConsentBox.classList.remove("dues-consent-card");
+      if (labelCareer) labelCareer.innerHTML = `AI 활용 경험 및 관심 분야, 주요 사회 경력 <span class="req">*</span>`;
+      if (partyStatusSelect && partyStatusSelect.value.includes("비당원")) {
+        partyStatusSelect.value = "권리당원 (당비 납부 당원)";
+      }
     } else if (selectedRole === "자문교수단") {
       dynamicNotice.innerHTML = `
         💡 <strong>[자문교수단 지원 안내]</strong> 교육연수위원회 강좌 기획 자문 및 특별 강의를 담당합니다. 학계·산업계·AI·문화예술 등 <strong>외부 전문가(비당원 포함)</strong> 누구나 참여하실 수 있습니다.
@@ -207,6 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let duesLabel = "자문교수단(강좌기획·강의)";
       if (position === "부위원장") duesLabel = "월 3만원 납부동의";
       else if (position === "분과위원장") duesLabel = "월 1만원 납부동의";
+      else if (position === "더민주 AI 크리에이터") duesLabel = "AI크리에이터(보조강사·강사양성)";
 
       const now = new Date();
       const yyyy = now.getFullYear();
@@ -474,6 +487,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const vice = list.filter((x) => x.position === "부위원장").length;
     const subChair = list.filter((x) => x.position === "분과위원장").length;
     const advisor = list.filter((x) => x.position === "자문교수단").length;
+    const creator = list.filter((x) => x.position === "더민주 AI 크리에이터").length;
     const member = list.filter((x) => x.position === "일반 교육연수위원").length;
 
     const setTxt = (id, val) => {
@@ -484,6 +498,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTxt("kpiViceChair", vice);
     setTxt("kpiSubChair", subChair);
     setTxt("kpiAdvisor", advisor);
+    setTxt("kpiCreator", creator);
     setTxt("kpiMember", member);
   }
 
