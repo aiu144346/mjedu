@@ -1,0 +1,10 @@
+scratch/
+_unused_assets/
+__pycache__/
+*.py
+*.pyc
+*.docx
+*.pdf
+중앙당_우수활동사례_공식보고서_정우진.*
+report.docx
+report.pdf

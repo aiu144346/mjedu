@@ -1,0 +1,1240 @@
+/* ==========================================================================
+   더불어민주당 울산광역시당 교육연수위원회 - 위원 공개모집 전용 스타일 (recruit.css)
+   Mobile-First UX · 카카오톡 인앱 브라우저 최적화 · 시니어 큰글씨 모드 완벽 지원
+   ========================================================================== */
+
+:root {
+  --mj-navy: #0A192F;
+  --mj-blue: #004EA2;
+  --mj-blue-dark: #003775;
+  --mj-sky: #00A3E0;
+  --mj-cyan: #38BDF8;
+  --mj-gold: #F59E0B;
+  --mj-emerald: #059669;
+  --mj-bg-soft: #F4F8FD;
+  --mj-border: #D6E4F0;
+  --mj-text-main: #0F172A;
+  --mj-text-sub: #334155;
+  --mj-text-muted: #64748B;
+}
+
+body.recruit-page {
+  background-color: var(--mj-bg-soft);
+  color: var(--mj-text-main);
+  padding-bottom: 84px;
+}
+
+body.recruit-page.large-text-mode {
+  font-size: 112%;
+}
+
+body.recruit-page.large-text-mode .form-control-input,
+body.recruit-page.large-text-mode .form-control-select,
+body.recruit-page.large-text-mode .form-control-textarea {
+  font-size: 1.12rem;
+  padding: 15px 16px;
+}
+
+/* --------------------------------------------------------------------------
+   1. 히어로 배너 (출범 의의 및 핵심 특전)
+   -------------------------------------------------------------------------- */
+.recruit-hero {
+  background: linear-gradient(135deg, #071326 0%, #0A2647 45%, #004EA2 100%);
+  color: #ffffff;
+  padding: 44px 0 48px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid var(--mj-sky);
+}
+
+.recruit-hero::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(0, 163, 224, 0.28) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.recruit-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -140px;
+  left: -80px;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.16) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-top-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.hero-badge-first {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(245, 158, 11, 0.18);
+  border: 1px solid rgba(251, 191, 36, 0.65);
+  color: #FDE68A;
+  font-size: 0.84rem;
+  font-weight: 800;
+  padding: 6px 14px;
+  border-radius: 999px;
+  letter-spacing: -0.2px;
+}
+
+.hero-badge-sub {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: #E0F2FE;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 6px 13px;
+  border-radius: 999px;
+}
+
+.recruit-hero-title {
+  font-size: 2.15rem;
+  font-weight: 900;
+  line-height: 1.3;
+  letter-spacing: -0.8px;
+  margin-bottom: 16px;
+  word-break: keep-all;
+}
+
+.recruit-hero-title .accent-cyan {
+  color: #67E8F9;
+}
+
+.recruit-hero-title .accent-gold {
+  color: #FDE047;
+}
+
+.recruit-significance-box {
+  background: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-left: 4px solid #38BDF8;
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  max-width: 860px;
+}
+
+.recruit-significance-box p {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: #F1F5F9;
+  margin: 0;
+  word-break: keep-all;
+}
+
+.recruit-significance-box strong {
+  color: #7DD3FC;
+  font-weight: 800;
+}
+
+/* 특전 하이라이트 그리드 */
+.hero-perks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+  max-width: 860px;
+}
+
+.hero-perk-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(10, 25, 47, 0.55);
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.hero-perk-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #00A3E0, #004EA2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.hero-perk-text strong {
+  display: block;
+  font-size: 0.96rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 3px;
+}
+
+.hero-perk-text span {
+  display: block;
+  font-size: 0.84rem;
+  color: #CBD5E1;
+  line-height: 1.45;
+}
+
+.hero-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-hero-apply {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #00A3E0 0%, #0284C7 100%);
+  color: #FFFFFF;
+  font-size: 1.08rem;
+  font-weight: 900;
+  padding: 15px 28px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(0, 163, 224, 0.38);
+  transition: all 0.2s ease;
+}
+
+.btn-hero-apply:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 163, 224, 0.5);
+  color: #FFFFFF;
+}
+
+.btn-hero-kakao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #FEE500;
+  color: #191919;
+  font-size: 0.96rem;
+  font-weight: 800;
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-hero-kakao:hover {
+  background: #FDD835;
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   2. 공통 섹션 타이틀 및 컨테이너
+   -------------------------------------------------------------------------- */
+.recruit-section {
+  padding: 44px 0;
+}
+
+.recruit-section.bg-white {
+  background-color: #FFFFFF;
+}
+
+.sec-header {
+  margin-bottom: 26px;
+}
+
+.sec-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--mj-blue);
+  background: #E0F2FE;
+  padding: 4px 11px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+.sec-title {
+  font-size: 1.65rem;
+  font-weight: 900;
+  color: var(--mj-navy);
+  letter-spacing: -0.6px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  word-break: keep-all;
+}
+
+.sec-desc {
+  font-size: 0.96rem;
+  color: var(--mj-text-sub);
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+/* --------------------------------------------------------------------------
+   3. 4대 핵심 교육 분야 (2x2 그리드)
+   -------------------------------------------------------------------------- */
+.edu-pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.edu-pillar-card {
+  background: #FFFFFF;
+  border: 1.5px solid var(--mj-border);
+  border-radius: 16px;
+  padding: 22px 20px;
+  position: relative;
+  transition: all 0.22s ease;
+  box-shadow: 0 4px 12px rgba(10, 25, 47, 0.04);
+}
+
+.edu-pillar-card:hover {
+  border-color: var(--mj-sky);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 78, 162, 0.1);
+}
+
+.pillar-num-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.pillar-num {
+  font-size: 0.78rem;
+  font-weight: 900;
+  color: var(--mj-blue);
+  background: #EBF5FF;
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+
+.pillar-emoji {
+  font-size: 1.75rem;
+}
+
+.edu-pillar-card h3 {
+  font-size: 1.12rem;
+  font-weight: 900;
+  color: var(--mj-navy);
+  margin-bottom: 8px;
+  line-height: 1.35;
+  word-break: keep-all;
+}
+
+.edu-pillar-card p {
+  font-size: 0.88rem;
+  color: var(--mj-text-sub);
+  line-height: 1.55;
+  margin: 0;
+  word-break: keep-all;
+}
+
+/* --------------------------------------------------------------------------
+   4. 모집 부문 상세 및 분과 체계 카드
+   -------------------------------------------------------------------------- */
+.role-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.role-card {
+  background: #FFFFFF;
+  border: 2px solid var(--mj-border);
+  border-radius: 18px;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.role-card.featured-role {
+  border-color: var(--mj-blue);
+  box-shadow: 0 8px 24px rgba(0, 78, 162, 0.1);
+}
+
+.role-card:hover {
+  border-color: var(--mj-sky);
+  transform: translateY(-3px);
+}
+
+.role-top-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.tag-blue {
+  background: #E0F2FE;
+  color: #0369A1;
+}
+
+.tag-purple {
+  background: #F3E8FF;
+  color: #6D28D9;
+}
+
+.tag-emerald {
+  background: #D1FAE5;
+  color: #047857;
+}
+
+.role-title {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--mj-navy);
+  margin-bottom: 8px;
+}
+
+.role-desc {
+  font-size: 0.92rem;
+  color: var(--mj-text-sub);
+  line-height: 1.55;
+  margin-bottom: 16px;
+  word-break: keep-all;
+}
+
+.role-spec-box {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 13px 14px;
+  margin-bottom: 16px;
+}
+
+.role-spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.86rem;
+  padding: 5px 0;
+  border-bottom: 1px dashed #E2E8F0;
+}
+
+.role-spec-row:last-child {
+  border-bottom: none;
+}
+
+.spec-label {
+  color: var(--mj-text-muted);
+  font-weight: 700;
+}
+
+.spec-val {
+  color: var(--mj-navy);
+  font-weight: 800;
+  text-align: right;
+}
+
+.spec-val.dues-highlight {
+  color: #DC2626;
+  background: #FEF2F2;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.spec-val.free-highlight {
+  color: #059669;
+  background: #ECFDF5;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.btn-role-select {
+  width: 100%;
+  padding: 11px 16px;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  border: 1.5px solid var(--mj-blue);
+  background: #F0F7FF;
+  color: var(--mj-blue);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.btn-role-select:hover {
+  background: var(--mj-blue);
+  color: #FFFFFF;
+}
+
+/* 6대 전문 분과 체계 안내 박스 */
+.subcommittee-showcase {
+  background: linear-gradient(135deg, #F0F7FF 0%, #E0F2FE 100%);
+  border: 1.5px solid #BAE6FD;
+  border-radius: 16px;
+  padding: 22px 24px;
+}
+
+.subcommittee-showcase-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.subcommittee-showcase-head h4 {
+  font-size: 1.08rem;
+  font-weight: 900;
+  color: var(--mj-navy);
+  margin: 0;
+}
+
+.subcommittee-showcase-head span {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--mj-blue);
+}
+
+.subcommittee-badges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.sub-badge-item {
+  background: #FFFFFF;
+  border: 1px solid #BAE6FD;
+  border-radius: 10px;
+  padding: 11px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sub-badge-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.sub-badge-info strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--mj-navy);
+}
+
+.sub-badge-info small {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--mj-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   5. 선발 및 위촉 절차 3-Step 타임라인
+   -------------------------------------------------------------------------- */
+.process-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  position: relative;
+}
+
+.process-step-card {
+  background: #FFFFFF;
+  border: 1.5px solid var(--mj-border);
+  border-radius: 16px;
+  padding: 22px 20px;
+  position: relative;
+}
+
+.step-badge-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--mj-navy);
+  color: #38BDF8;
+  font-size: 0.8rem;
+  font-weight: 900;
+  padding: 4px 12px;
+  border-radius: 99px;
+  margin-bottom: 12px;
+}
+
+.process-step-card h4 {
+  font-size: 1.12rem;
+  font-weight: 900;
+  color: var(--mj-navy);
+  margin-bottom: 6px;
+}
+
+.process-step-card p {
+  font-size: 0.88rem;
+  color: var(--mj-text-sub);
+  line-height: 1.55;
+  margin: 0;
+  word-break: keep-all;
+}
+
+/* --------------------------------------------------------------------------
+   6. 모바일 스마트 지원서 (Form Container)
+   -------------------------------------------------------------------------- */
+.recruit-form-shell {
+  background: #FFFFFF;
+  border: 2px solid var(--mj-blue);
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0, 78, 162, 0.12);
+  overflow: hidden;
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.recruit-form-header {
+  background: linear-gradient(135deg, var(--mj-navy) 0%, var(--mj-blue) 100%);
+  color: #FFFFFF;
+  padding: 26px 28px;
+}
+
+.recruit-form-header h3 {
+  font-size: 1.45rem;
+  font-weight: 900;
+  margin: 0 0 6px;
+  letter-spacing: -0.5px;
+}
+
+.recruit-form-header p {
+  font-size: 0.92rem;
+  color: #E0F2FE;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.recruit-form-body {
+  padding: 28px;
+}
+
+.form-step-block {
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1.5px solid #EEF2F6;
+}
+
+.form-step-block:last-of-type {
+  border-bottom: none;
+  margin-bottom: 18px;
+  padding-bottom: 0;
+}
+
+.form-step-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.08rem;
+  font-weight: 900;
+  color: var(--mj-navy);
+  margin-bottom: 14px;
+}
+
+.step-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--mj-blue);
+  color: #FFFFFF;
+  font-size: 0.84rem;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* 지원 부문 라디오 선택 그리드 */
+.position-radio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.position-radio-card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border: 2px solid var(--mj-border);
+  border-radius: 14px;
+  padding: 15px 16px;
+  cursor: pointer;
+  background: #FFFFFF;
+  transition: all 0.18s ease;
+}
+
+.position-radio-card:hover {
+  border-color: var(--mj-sky);
+  background: #F8FBFF;
+}
+
+.position-radio-card input[type="radio"] {
+  margin-top: 3px;
+  width: 20px;
+  height: 20px;
+  accent-color: var(--mj-blue);
+  flex-shrink: 0;
+}
+
+.position-radio-card.selected {
+  border-color: var(--mj-blue);
+  background: #EBF5FF;
+  box-shadow: 0 4px 12px rgba(0, 78, 162, 0.1);
+}
+
+.pos-card-content strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--mj-navy);
+  margin-bottom: 3px;
+}
+
+.pos-card-content small {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--mj-text-sub);
+  line-height: 1.4;
+}
+
+.pos-dues-pill {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 99px;
+}
+
+.pos-dues-pill.paid {
+  background: #FEE2E2;
+  color: #B91C1C;
+}
+
+.pos-dues-pill.exempt {
+  background: #D1FAE5;
+  color: #047857;
+}
+
+/* 지원 부문별 실시간 안내 배너 */
+.dynamic-role-notice {
+  background: #F0F9FF;
+  border: 1.5px solid #7DD3FC;
+  border-radius: 12px;
+  padding: 13px 16px;
+  font-size: 0.88rem;
+  color: #0C4A6E;
+  line-height: 1.55;
+}
+
+.dynamic-role-notice strong {
+  color: #0369A1;
+  font-weight: 800;
+}
+
+/* 희망 분과 체크박스 그리드 */
+.subcommittee-check-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.sub-check-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid var(--mj-border);
+  border-radius: 11px;
+  padding: 12px 14px;
+  cursor: pointer;
+  background: #FFFFFF;
+  transition: all 0.15s ease;
+}
+
+.sub-check-card:hover {
+  border-color: var(--mj-sky);
+}
+
+.sub-check-card input[type="checkbox"] {
+  width: 19px;
+  height: 19px;
+  accent-color: var(--mj-blue);
+  flex-shrink: 0;
+}
+
+.sub-check-card.checked {
+  border-color: var(--mj-blue);
+  background: #F0F7FF;
+}
+
+.sub-check-text strong {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--mj-navy);
+}
+
+.sub-check-text small {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--mj-text-muted);
+}
+
+/* 입력 폼 컨트롤 */
+.recruit-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.field-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.field-label {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--mj-navy);
+}
+
+.field-label .req {
+  color: #DC2626;
+  margin-left: 2px;
+}
+
+.form-control-input,
+.form-control-select,
+.form-control-textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 10px;
+  font-size: 0.98rem;
+  font-family: inherit;
+  color: var(--mj-text-main);
+  background: #FFFFFF;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.form-control-input:focus,
+.form-control-select:focus,
+.form-control-textarea:focus {
+  outline: none;
+  border-color: var(--mj-blue);
+  box-shadow: 0 0 0 3px rgba(0, 78, 162, 0.14);
+}
+
+.field-help {
+  font-size: 0.8rem;
+  color: var(--mj-text-muted);
+}
+
+/* 서약 및 동의 박스 */
+.consent-card {
+  background: #F8FAFC;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.consent-card.dues-consent-card {
+  background: #FFFBEB;
+  border-color: #FCD34D;
+}
+
+.consent-header-notice {
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.55;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #CBD5E1;
+  word-break: keep-all;
+}
+
+.consent-check-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: var(--mj-navy);
+}
+
+.consent-check-label input[type="checkbox"] {
+  width: 21px;
+  height: 21px;
+  margin-top: 2px;
+  accent-color: var(--mj-blue);
+  flex-shrink: 0;
+}
+
+.btn-submit-recruit {
+  width: 100%;
+  padding: 17px 24px;
+  background: linear-gradient(135deg, #004EA2 0%, #00A3E0 100%);
+  color: #FFFFFF;
+  font-size: 1.12rem;
+  font-weight: 900;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 78, 162, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-submit-recruit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 78, 162, 0.42);
+}
+
+.btn-submit-recruit:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+/* --------------------------------------------------------------------------
+   7. 신청 완료 디지털 접수 확인증 (일반 신청자용 - 엑셀 버튼 완전 차단)
+   -------------------------------------------------------------------------- */
+.receipt-card-wrap {
+  display: none;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.receipt-badge-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #004EA2, #00A3E0);
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 20px rgba(0, 78, 162, 0.25);
+}
+
+.receipt-paper {
+  background: #F8FAFC;
+  border: 2px solid #BAE6FD;
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 520px;
+  margin: 18px auto;
+  text-align: left;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #CBD5E1;
+  font-size: 0.92rem;
+}
+
+.receipt-row:last-child {
+  border-bottom: none;
+}
+
+.receipt-row span {
+  color: var(--mj-text-muted);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.receipt-row strong {
+  color: var(--mj-navy);
+  font-weight: 800;
+  text-align: right;
+}
+
+/* --------------------------------------------------------------------------
+   8. 카카오톡 홍보 공유 박스
+   -------------------------------------------------------------------------- */
+.kakao-promo-card {
+  background: #FFFFFF;
+  border: 2px solid #FDE047;
+  border-radius: 18px;
+  padding: 24px;
+  max-width: 840px;
+  margin: 28px auto 0;
+  box-shadow: 0 6px 20px rgba(10, 25, 47, 0.05);
+}
+
+.kakao-promo-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.kakao-promo-head h4 {
+  font-size: 1.08rem;
+  font-weight: 900;
+  color: var(--mj-navy);
+  margin: 0;
+}
+
+.kakao-preview-textarea {
+  width: 100%;
+  height: 150px;
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.85rem;
+  color: #334155;
+  line-height: 1.55;
+  resize: vertical;
+  font-family: inherit;
+  margin-bottom: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   9. 🔒 관리자 전용 모달 & 실시간 엑셀 다운로드 대시보드 (비밀번호 533745)
+   -------------------------------------------------------------------------- */
+.admin-modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 25, 47, 0.76);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.admin-modal-backdrop.open {
+  display: flex;
+}
+
+.admin-modal-box {
+  background: #FFFFFF;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1060px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+.admin-modal-header {
+  background: var(--mj-navy);
+  color: #FFFFFF;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-modal-header h3 {
+  font-size: 1.18rem;
+  font-weight: 900;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-modal-close {
+  background: rgba(255, 255, 255, 0.14);
+  color: #FFFFFF;
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.admin-modal-body {
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.admin-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-kpi-card {
+  background: #F8FAFC;
+  border: 1.5px solid var(--mj-border);
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+}
+
+.admin-kpi-card span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--mj-text-muted);
+  margin-bottom: 4px;
+}
+
+.admin-kpi-card strong {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--mj-blue);
+}
+
+.admin-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  background: #F0F7FF;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #BAE6FD;
+}
+
+.admin-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #CBD5E1;
+  border-radius: 12px;
+}
+
+.admin-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  min-width: 880px;
+}
+
+.admin-data-table th {
+  background: #0A192F;
+  color: #FFFFFF;
+  font-weight: 800;
+  padding: 11px 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.admin-data-table td {
+  padding: 10px;
+  border-bottom: 1px solid #E2E8F0;
+  color: #1E293B;
+  vertical-align: top;
+}
+
+.admin-data-table tr:hover td {
+  background: #F8FAFC;
+}
+
+/* --------------------------------------------------------------------------
+   10. 스마트폰 반응형 미디어 쿼리
+   -------------------------------------------------------------------------- */
+@media (max-width: 960px) {
+  .edu-pillar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .role-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .subcommittee-badges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .admin-kpi-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .recruit-hero {
+    padding: 32px 0 36px;
+  }
+  .recruit-hero-title {
+    font-size: 1.62rem;
+  }
+  .hero-perks-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-action-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btn-hero-apply,
+  .btn-hero-kakao {
+    width: 100%;
+  }
+  .edu-pillar-grid {
+    grid-template-columns: 1fr;
+  }
+  .subcommittee-badges-grid {
+    grid-template-columns: 1fr;
+  }
+  .recruit-form-header {
+    padding: 20px;
+  }
+  .recruit-form-body {
+    padding: 18px 16px;
+  }
+  .position-radio-grid {
+    grid-template-columns: 1fr;
+  }
+  .subcommittee-check-grid {
+    grid-template-columns: 1fr;
+  }
+  .recruit-fields-grid {
+    grid-template-columns: 1fr;
+  }
+  .admin-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

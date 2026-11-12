@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, viewport-fit=cover" />
+  <title>민주 정강정책·당헌당규 퀴즈 챌린지 | 기획·제작: 정우진</title>
+  <meta name="description" content="더불어민주당 2026.08.11 최신 개정 강령·당헌·당규 기반 인터랙티브 에듀테인먼트 퀴즈 앱. 4단계 레벨(새싹·핵심·정책리더·마스터) 진단 및 디지털 인증서 발급. 기획·제작: 정우진" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="민주 정강정책·당헌당규 퀴즈 챌린지 · 4단계 레벨 진단 & 공식 인증서" />
+  <meta property="og:description" content="재미있게 풀고 마스터하는 더불어민주당 강령·당헌·당규! 나의 당원 레벨을 진단하고 인증서를 발급받으세요. 기획·제작: 정우진" />
+  <meta property="og:image" content="assets/images/quiz/quiz_hero_banner.png" />
+
+  <!-- Pretendard Font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/policy-quiz.css?v=20261105_deepseek_1" />
+
+  <style>
+    /* 캔버스 파티클 레이어 */
+    #confettiCanvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 3000;
+    }
+  </style>
+</head>
+<body class="quiz-body">
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- 상단 글로벌 네비게이션 헤더 -->
+  <header class="quiz-header">
+    <div class="quiz-header-inner">
+      <!-- 모바일 햄버거 메뉴 버튼 -->
+      <button type="button" class="quiz-mobile-menu-btn" id="btnQuizMenu" aria-label="메뉴 열기">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <a href="index.html" class="quiz-brand">
+        <img src="더불어민주당 로고.png" alt="더불어민주당 로고" class="party-logo" />
+        <div class="quiz-brand-text">
+          <span class="quiz-brand-title">정강정책·당헌당규 퀴즈 챌린지</span>
+          <span class="quiz-brand-sub">더불어민주당 울산광역시당 교육연수위원회</span>
+        </div>
+      </a>
+
+      <!-- 제작자 배지 -->
+      <div class="quiz-creator-badge" title="기획 및 제작: 정우진">
+        <img src="JWJ_Profile_Image.png" alt="정우진 부원장" onerror="this.src='김민석대표.jpg'" />
+        <span>기획·제작 <span class="name">정우진</span></span>
+      </div>
+
+      <nav class="quiz-nav-links">
+        <a href="index.html" class="quiz-nav-btn">홈으로</a>
+        <a href="party-rules-bot.html" class="quiz-nav-btn" style="background: rgba(0, 78, 162, 0.1); color: #004EA2; font-weight: 800;">🏛️ AI 자문관</a>
+        <a href="ai-academy.html" class="quiz-nav-btn">AI 아카데미</a>
+        <a href="2026.08.11. 더불어민주당 강령당헌당규.md" target="_blank" class="quiz-nav-btn" style="color: #004EA2;">원문(MD) 보기 ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 퀴즈용 모바일 슬라이드 드로어 -->
+  <div class="drawer-backdrop" id="quizDrawerBackdrop"></div>
+  <aside class="mobile-drawer" id="quizMobileDrawer">
+    <div class="drawer-header">
+      <div class="drawer-creator-card">
+        <img src="JWJ_Profile_Image.png" alt="정우진" class="drawer-creator-img" onerror="this.src='정우진1.jpg'" />
+        <div class="drawer-creator-details">
+          <span class="drawer-creator-pill">기획·제작</span>
+          <strong class="drawer-creator-name">정우진 부원장</strong>
+          <span class="drawer-creator-sub">더불어민주당 교육연수원</span>
+        </div>
+      </div>
+      <button type="button" class="drawer-close-btn" id="btnQuizCloseDrawer" aria-label="메뉴 닫기">✕</button>
+    </div>
+
+    <nav class="drawer-nav">
+      <div class="drawer-section-title">서비스 바로가기</div>
+      <a href="policy-quiz.html" class="drawer-nav-item active">
+        <span class="nav-icon">🏆</span>
+        <div class="nav-label-box">
+          <span class="nav-main-label">정강정책·당헌당규 퀴즈</span>
+          <span class="nav-sub-label">4단계 레벨 진단 &amp; 디지털 인증서</span>
+        </div>
+      </a>
+      <a href="party-rules-bot.html" class="drawer-nav-item">
+        <span class="nav-icon">🤖</span>
+        <div class="nav-label-box">
+          <span class="nav-main-label">민주당헌 365 AI 자문관</span>
+          <span class="nav-sub-label">당헌·당규 실시간 자동응답 &amp; 조항 대조</span>
+        </div>
+      </a>
+      <a href="index.html" class="drawer-nav-item">
+        <span class="nav-icon">🏠</span>
+        <div class="nav-label-box">
+          <span class="nav-main-label">울산시당 교육연수원 메인</span>
+          <span class="nav-sub-label">공지사항, 커리큘럼, 비전 소개</span>
+        </div>
+      </a>
+      <a href="ai-academy.html" class="drawer-nav-item">
+        <span class="nav-icon">🎓</span>
+        <div class="nav-label-box">
+          <span class="nav-main-label">AI 당원 아카데미</span>
+          <span class="nav-sub-label">스마트 당원 역량 강화 교육</span>
+        </div>
+      </a>
+      <a href="2026.08.11. 더불어민주당 강령당헌당규.md" target="_blank" class="drawer-nav-item">
+        <span class="nav-icon">📜</span>
+        <div class="nav-label-box">
+          <span class="nav-main-label">당헌·당규 원문 (MD/PDF) ↗</span>
+          <span class="nav-sub-label">2026.08.11 최신 개정판 410쪽 전수</span>
+        </div>
+      </a>
+    </nav>
+
+    <div class="drawer-footer">
+      <p>더불어민주당 울산광역시당 교육연수위원회</p>
+      <p style="color: #64748B; margin-top: 2px;">정강정책·당헌당규 퀴즈 챌린지</p>
+    </div>
+  </aside>
+
+  <!-- 메인 뷰 컨테이너 -->
+  <main class="quiz-main">
+    
+    <!-- ====================================================================
+         VIEW 1: 로비 화면 (대기실 & 모드 선택)
+         ==================================================================== -->
+    <section id="viewLobby" class="quiz-view active">
+      
+      <!-- 히어로 배너 카드 -->
+      <div class="lobby-hero-card">
+        <div class="lobby-hero-grid">
+          <div class="lobby-hero-content">
+            <div class="lobby-pill-tag">
+              <span>🌟 2026.08.11 최신 개정판 원문 기반</span>
+            </div>
+            <h1 class="lobby-hero-title">
+              깨어있는 당원의 힘!<br />
+              <span class="highlight">정강·당헌·당규</span> 퀴즈 챌린지
+            </h1>
+            <p class="lobby-hero-desc">
+              민주당의 역사적 뿌리와 5대 가치, 13대 정책부터 당원주권과 공직후보자 자격기준까지!<br />
+              재미있는 퀴즈로 나의 레벨(새싹·핵심·정책리더·마스터)을 진단하고 공식 인증서를 받으세요.
+            </p>
+            <div class="lobby-meta-box">
+              <span><strong>기획·제작</strong> 정우진</span>
+              <span>•</span>
+              <span><strong>문항 풀</strong> 총 48문항 정밀 데이터셋</span>
+            </div>
+          </div>
+          
+          <div class="lobby-hero-media">
+            <img src="assets/images/quiz/quiz_hero_banner.png" alt="퀴즈 챌린지 3D 배너" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 닉네임 입력 카드 -->
+      <div class="name-input-card">
+        <label for="playerNameInput" class="name-input-label">
+          🎖️ 도전자 성명 또는 당원 닉네임을 입력하세요 (디지털 인증서 발급용)
+        </label>
+        <div class="name-input-row">
+          <input
+            type="text"
+            id="playerNameInput"
+            class="name-input-field"
+            placeholder="예: 홍길동 당원 (입력하지 않으면 '당원 동지'로 발급)"
+            maxlength="20"
+          />
+        </div>
+      </div>
+
+      <!-- 모드 선택 그리드 -->
+      <h2 class="mode-selection-title">🎯 도전 모드를 선택하세요</h2>
+      <div class="mode-cards-grid">
+        
+        <!-- 모드 1: 종합 레벨 진단 -->
+        <div class="mode-card featured" data-start-mode="diagnostic">
+          <span class="mode-badge-tag tag-primary">추천 대표 코스</span>
+          <div class="mode-card-icon">🏆</div>
+          <h3 class="mode-card-title">종합 레벨 진단 챌린지</h3>
+          <p class="mode-card-desc">
+            초급 5 + 중급 5 + 상급 5 + 마스터 5 (총 20문항)를 단계별로 풀며 나의 최종 당원 등급을 정밀 진단받는 코스입니다.
+          </p>
+          <button type="button" class="mode-start-btn">20문항 진단 시작 ➔</button>
+        </div>
+
+        <!-- 모드 2: 스피드 10문항 -->
+        <div class="mode-card" data-start-mode="speed">
+          <span class="mode-badge-tag tag-green">빠른 2분 코스</span>
+          <div class="mode-card-icon">⚡</div>
+          <h3 class="mode-card-title">스피드 10문항 챌린지</h3>
+          <p class="mode-card-desc">
+            전체 난이도에서 무작위로 추출된 10문항을 신속하게 풀고 점수와 콤보 보너스를 획득하는 캐주얼 퀴즈입니다.
+          </p>
+          <button type="button" class="mode-start-btn">10문항 스피드 시작 ➔</button>
+        </div>
+
+        <!-- 모드 3: 실전 연습 15문항 -->
+        <div class="mode-card" data-start-mode="practice">
+          <span class="mode-badge-tag tag-purple">집중 학습</span>
+          <div class="mode-card-icon">📚</div>
+          <h3 class="mode-card-title">핵심 15문항 챌린지</h3>
+          <p class="mode-card-desc">
+            강령, 윤리규범, 당헌, 당규의 핵심 15문항을 풀며 취약한 분야를 점검하고 실력을 키우는 트레이닝 모드입니다.
+          </p>
+          <button type="button" class="mode-start-btn">15문항 학습 시작 ➔</button>
+        </div>
+
+      </div>
+
+      <!-- 4단계 레벨 미리보기 바 -->
+      <div class="level-preview-bar">
+        <div class="level-preview-title">
+          <span>🏅 4단계 마스터 레벨 체계</span>
+          <span style="font-size: 0.78rem; color: #64748B;">정답률에 따라 디지털 인증서 엠블럼 차등 수여</span>
+        </div>
+        <div class="level-preview-grid">
+          <div class="level-item-chip">
+            <div class="level-chip-icon" style="background: #10B981;">🌱</div>
+            <div class="level-chip-text">
+              <span class="level-chip-name">Lv.1 새싹 당원</span>
+              <span class="level-chip-sub">역사 뿌리·5대 가치</span>
+            </div>
+          </div>
+          <div class="level-item-chip">
+            <div class="level-chip-icon" style="background: #00A3E0;">🌿</div>
+            <div class="level-chip-text">
+              <span class="level-chip-name">Lv.2 핵심 당원</span>
+              <span class="level-chip-sub">13대 정책·윤리규범</span>
+            </div>
+          </div>
+          <div class="level-item-chip">
+            <div class="level-chip-icon" style="background: #004EA2;">🌳</div>
+            <div class="level-chip-text">
+              <span class="level-chip-name">Lv.3 정책 리더</span>
+              <span class="level-chip-sub">당원주권·대의조직</span>
+            </div>
+          </div>
+          <div class="level-item-chip">
+            <div class="level-chip-icon" style="background: #7C3AED;">👑</div>
+            <div class="level-chip-text">
+              <span class="level-chip-name">Lv.4 민주 마스터</span>
+              <span class="level-chip-sub">선거룰·검증심사기준</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 아코디언: 핵심 요약 족보 (1분 예습) -->
+      <div class="cheat-sheet-card">
+        <div class="cheat-sheet-header" id="cheatSheetToggle">
+          <h3>
+            <span>💡 퀴즈 풀기 전 1분 예습! 핵심 요약 족보</span>
+          </h3>
+          <span class="toggle-icon" style="font-size: 0.85rem; font-weight: 800; color: #004EA2;">▼ 족보 열기</span>
+        </div>
+        <div class="cheat-sheet-content" id="cheatSheetContent">
+          <div class="cheat-sheet-list" id="cheatSheetList">
+            <!-- JS 동적 렌더링 -->
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ====================================================================
+         VIEW 2: 퀴즈 풀이 화면 (Arena Screen)
+         ==================================================================== -->
+    <section id="viewArena" class="quiz-view">
+      <div class="quiz-arena-card">
+        
+        <!-- 상단 상태 바 -->
+        <div class="arena-top-bar">
+          <div class="arena-level-pill" id="arenaLevelPill">
+            🌱 초급 · 새싹 당원 단계
+          </div>
+
+          <div class="arena-stats-group">
+            <div class="arena-combo-chip" id="arenaComboChip" style="display: none;">
+              <span>🔥</span>
+              <span id="arenaComboCount">2연속 정답!</span>
+            </div>
+            <div class="arena-score-chip" id="arenaScoreChip">점수: 0점</div>
+          </div>
+        </div>
+
+        <!-- 프로그레스 바 -->
+        <div class="arena-progress-wrap">
+          <div class="arena-progress-fill" id="arenaProgressFill"></div>
+        </div>
+
+        <!-- 문제 메타 및 번호 -->
+        <div class="arena-question-meta">
+          <span class="arena-category-tag" id="arenaCategoryTag">강령 · 전문과 가치</span>
+          <span class="arena-q-number" id="arenaQNumber">1 / 20</span>
+        </div>
+
+        <!-- 질문 내용 -->
+        <h2 class="arena-question-title" id="arenaQuestionTitle">
+          질문 내용이 이곳에 표시됩니다.
+        </h2>
+
+        <!-- 4지선다 옵션 리스트 -->
+        <div class="arena-options-list" id="arenaOptionsList">
+          <!-- JS 동적 렌더링 -->
+        </div>
+
+        <!-- 즉각 해설 드로어 -->
+        <div class="arena-explanation-drawer" id="arenaExplanationDrawer">
+          <div class="exp-header" id="expHeader">
+            🎉 정답입니다!
+          </div>
+          <div class="exp-body" id="expBody">
+            해설 내용이 이곳에 표시됩니다.
+          </div>
+          <div class="exp-actions">
+            <span style="font-size: 0.82rem; color: #64748B;">기획·제작: 정우진</span>
+            <button type="button" class="next-question-btn" id="nextQuestionBtn">
+              다음 문제로 이동 ➔
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW 3: 결과 및 공식 디지털 인증서 화면 (Result Screen)
+         ==================================================================== -->
+    <section id="viewResult" class="quiz-view">
+      
+      <!-- 결과 요약 헤더 카드 -->
+      <div class="result-header-card">
+        <div class="result-badge-display" id="resultBadgeDisplay">👑</div>
+        <h1 class="result-title" id="resultTitle">홍길동 동지, 축하합니다!</h1>
+        <p class="result-subtitle" id="resultSubtitle">당신의 최종 당원 등급은 [민주 마스터] 입니다.</p>
+        
+        <div class="result-score-grid">
+          <div class="score-box">
+            <div class="score-box-label">최종 획득 점수</div>
+            <div class="score-box-val" id="resultScoreVal">100점</div>
+          </div>
+          <div class="score-box">
+            <div class="score-box-label">정답률</div>
+            <div class="score-box-val" id="resultAccuracyVal">20/20 (100%)</div>
+          </div>
+          <div class="score-box">
+            <div class="score-box-label">최대 콤보</div>
+            <div class="score-box-val" id="resultComboVal">20회</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 디지털 수료증 (인쇄 / 이미지 저장 최적화) -->
+      <div class="certificate-preview-wrap">
+        <div class="digital-certificate" id="printableCertificate">
+          <img src="더불어민주당 로고.png" alt="워터마크 로고" class="cert-watermark" />
+          
+          <div class="cert-header">DEMOCRATIC PARTY OF KOREA · EDUCATION & TRAINING INSTITUTE</div>
+          <h2 class="cert-main-title">마 스 터 인 증 서</h2>
+          
+          <div style="font-size: 0.95rem; color: #475569; margin-bottom: 4px;">도전자 성명</div>
+          <div class="cert-recipient" id="certRecipientName">홍길동 동지</div>
+          
+          <div class="cert-rank-badge" id="certRankBadge">
+            👑 최종 등급: 민주 마스터 (마스터 레벨 이수)
+          </div>
+
+          <p class="cert-statement">
+            위 사람은 더불어민주당의 강령·당헌·당규(2026.08.11 최신 개정판)에 대한<br />
+            깊은 정책적 이해와 민주당원으로서의 드높은 주권 의식을 갖추고<br />
+            실시된 공식 퀴즈 챌린지 전 과정을 우수한 성적으로 수료하였으므로<br />
+            본 디지털 인증서를 수여합니다.
+          </p>
+
+          <div class="cert-footer-grid">
+            <div class="cert-date-info">
+              <div id="certDateText">발행일: 2026년 11월 5일</div>
+              <div id="certIdText" style="color: #94A3B8; font-size: 0.78rem; margin-top: 4px;">인증번호: MJE-2026-7842</div>
+            </div>
+
+            <div class="cert-seal-group">
+              <div class="cert-issuer-title">더불어민주당 교육연수원 부원장 정우진</div>
+              <div class="cert-issuer-org">울산광역시당 교육연수위원회</div>
+              <div class="cert-red-seal">
+                교육연수<br />부원장인
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 인증서 액션 버튼 바 (모바일 공유 지원) -->
+        <div class="cert-action-bar">
+          <button type="button" class="cert-action-btn" id="btnKakaoShare" style="background: #FEE500; color: #191919; font-weight: 800; border: none; box-shadow: 0 4px 12px rgba(254, 229, 0, 0.4);">
+            💬 카카오톡 / 모바일 결과 공유
+          </button>
+          <button type="button" class="cert-action-btn btn-primary" id="printCertBtn">
+            🖨️ 인증서 인쇄 / PDF 저장
+          </button>
+          <button type="button" class="cert-action-btn btn-secondary" id="copyShareBtn">
+            🔗 퀴즈 링크 복사
+          </button>
+          <button type="button" class="cert-action-btn btn-secondary" id="retryBtn">
+            🔄 다시 도전하기
+          </button>
+        </div>
+      </div>
+
+      <!-- 오답 노트 (Review Notes) -->
+      <div class="review-notes-card">
+        <h3 class="review-notes-title">
+          <span>📝 오답 노트 및 핵심 조항 복습</span>
+        </h3>
+        <div id="reviewNotesList">
+          <!-- JS 동적 렌더링 -->
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- 레벨업 축하 모달 오버레이 -->
+  <div class="level-up-overlay" id="levelUpOverlay">
+    <div class="level-up-modal">
+      <div class="level-up-badge-icon" id="levelUpBadge">🌿</div>
+      <h3 class="level-up-title" id="levelUpTitle">축하합니다! 레벨업!</h3>
+      <p class="level-up-desc" id="levelUpDesc">
+        이전 단계를 훌륭하게 통과하셨습니다. 이제 더욱 심도 있는 당헌당규 문제에 도전하세요!
+      </p>
+    </div>
+  </div>
+
+  <!-- 푸터 -->
+  <footer class="quiz-footer">
+    <div class="quiz-footer-creator">
+      기획 및 제작: 정우진
+    </div>
+    <div>
+      더불어민주당 울산광역시당 교육연수위원회 · 2026.08.11 강령·당헌·당규 개정판 기반 디지털 아카이브
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/policy-quiz-data.js?v=20261105_2"></script>
+  <script src="js/policy-quiz.js?v=20261105_deepseek_1"></script>
+  <!-- 모바일 하단 플로팅 퀵 탭바 (Mobile Floating App Switcher) -->
+  <nav class="mobile-app-switcher" id="mobileAppSwitcher" aria-label="모바일 하단 네비게이션">
+    <a href="index.html" class="switcher-tab">
+      <span class="switcher-icon">🏠</span>
+      <span class="switcher-label">홈</span>
+    </a>
+    <a href="party-rules-bot.html" class="switcher-tab">
+      <span class="switcher-icon">🤖</span>
+      <span class="switcher-label">AI 자문관</span>
+    </a>
+    <a href="policy-quiz.html" class="switcher-tab active">
+      <span class="switcher-icon">🏆</span>
+      <span class="switcher-label">퀴즈</span>
+    </a>
+    <a href="index.html#curriculum" class="switcher-tab">
+      <span class="switcher-icon">📑</span>
+      <span class="switcher-label">교육원</span>
+    </a>
+  </nav>
+
+</body>
+</html>

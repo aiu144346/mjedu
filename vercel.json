@@ -1,0 +1,12 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/recruit", "destination": "/recruit.html" },
+    { "source": "/join", "destination": "/recruit.html" },
+    { "source": "/party-rules-bot", "destination": "/party-rules-bot.html" },
+    { "source": "/policy-chat", "destination": "/party-rules-bot.html" },
+    { "source": "/policy-quiz", "destination": "/policy-quiz.html" },
+    { "source": "/ai-academy", "destination": "/ai-academy.html" },
+    { "source": "/report", "destination": "/report.html" }
+  ]
+}

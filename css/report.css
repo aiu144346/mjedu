@@ -1,0 +1,582 @@
+/* ==========================================================================
+   더불어민주당 중앙당교육연수원 제출용 공식 보고서 전용 스타일시트
+   기획·제작: 더불어민주당 교육연수원 부원장 정우진
+   A4 프린트 최적화 + 프리미엄 인터랙티브 웹 뷰어
+   ========================================================================== */
+
+:root {
+  --navy-deep: #0A192F;
+  --navy-blue: #1B365D;
+  --party-blue: #004EA2;
+  --sky-blue: #00A3E0;
+  --ice-blue: #F0F7FF;
+  --gold-seal: #D97706;
+  --gold-bg: #FEF3C7;
+  --gray-50: #F8FAFC;
+  --gray-100: #F1F5F9;
+  --gray-200: #E2E8F0;
+  --gray-400: #94A3B8;
+  --gray-600: #475569;
+  --gray-800: #1E293B;
+  --white: #FFFFFF;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  background-color: #E2E8F0;
+  color: var(--gray-800);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 60px;
+}
+
+/* 상단 플로팅 툴바 */
+.report-top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10, 25, 47, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--white);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 163, 224, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.report-bar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #67E8F9;
+}
+
+.report-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.bar-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--sky-blue);
+}
+
+.bar-btn.primary {
+  background: linear-gradient(135deg, #00A3E0 0%, #004EA2 100%);
+  border: none;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 163, 224, 0.4);
+}
+
+.bar-btn.primary:hover {
+  filter: brightness(1.1);
+}
+
+/* 보고서 본문 컨테이너 (A4 페이퍼 스타일) */
+.report-paper-container {
+  max-width: 900px;
+  margin: 30px auto;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 60px 70px;
+  border: 1px solid var(--gray-200);
+}
+
+/* =========================================================================
+   표지 (Cover Page)
+   ========================================================================= */
+.report-cover {
+  border-bottom: 3px double var(--navy-deep);
+  padding-bottom: 45px;
+  margin-bottom: 45px;
+  position: relative;
+}
+
+.cover-header-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.cover-party-logo {
+  height: 42px;
+  width: auto;
+}
+
+.cover-doc-badge {
+  background: var(--party-blue);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+
+.cover-title {
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: var(--navy-deep);
+  line-height: 1.3;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.cover-subtitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--party-blue);
+  line-height: 1.45;
+  margin-bottom: 35px;
+}
+
+.cover-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  padding: 20px 24px;
+}
+
+.meta-item {
+  font-size: 0.92rem;
+}
+
+.meta-item strong {
+  color: var(--navy-deep);
+  display: inline-block;
+  min-width: 90px;
+}
+
+/* =========================================================================
+   보고서 본문 타이포그래피 및 섹션
+   ========================================================================= */
+.report-section {
+  margin-bottom: 50px;
+}
+
+.section-h2 {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: var(--navy-deep);
+  border-left: 6px solid var(--party-blue);
+  padding-left: 14px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--navy-blue);
+  margin: 24px 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.report-p {
+  font-size: 0.98rem;
+  color: #334155;
+  line-height: 1.8;
+  margin-bottom: 14px;
+  text-align: justify;
+}
+
+/* 핵심 성과 지표 대시보드 카드 */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.kpi-card {
+  background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+  border: 1px solid #BFDBFE;
+  border-radius: 12px;
+  padding: 18px 14px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 78, 162, 0.06);
+}
+
+.kpi-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--gray-600);
+  margin-bottom: 6px;
+}
+
+.kpi-val {
+  font-size: 1.55rem;
+  font-weight: 900;
+  color: var(--party-blue);
+  line-height: 1.2;
+}
+
+.kpi-sub {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #059669;
+  margin-top: 4px;
+}
+
+/* 플랫폼 소개 카드 그리드 */
+.platform-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.platform-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--party-blue);
+}
+
+.platform-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.platform-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.platform-badge {
+  background: #EFF6FF;
+  color: var(--party-blue);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid #BFDBFE;
+}
+
+.platform-link-btn {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--party-blue);
+  text-decoration: none;
+  background: #EFF6FF;
+  padding: 5px 12px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.platform-feature-list {
+  list-style: none;
+  margin-top: 12px;
+}
+
+.platform-feature-list li {
+  font-size: 0.92rem;
+  color: #334155;
+  margin-bottom: 8px;
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.platform-feature-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #059669;
+  font-weight: 800;
+}
+
+/* 테이블 스타일 */
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+
+.report-table th, .report-table td {
+  border: 1px solid var(--gray-200);
+  padding: 12px 14px;
+  text-align: left;
+}
+
+.report-table th {
+  background: var(--navy-deep);
+  color: var(--white);
+  font-weight: 800;
+}
+
+.report-table tr:nth-child(even) {
+  background: var(--gray-50);
+}
+
+/* 현장 시연 QR 코드 그리드 */
+.qr-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.qr-card {
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  background: var(--gray-50);
+}
+
+.qr-card img.qr-img {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 10px;
+  background: var(--white);
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--gray-200);
+}
+
+.qr-title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--navy-deep);
+  margin-bottom: 4px;
+}
+
+.qr-sub {
+  font-size: 0.75rem;
+  color: var(--gray-600);
+}
+
+/* 공식 서명 및 직인 블록 */
+.report-seal-block {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 2px solid var(--navy-deep);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.seal-creator-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.seal-creator-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--sky-blue);
+}
+
+.seal-org-title {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--navy-deep);
+}
+
+.seal-creator-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--party-blue);
+  margin-top: 2px;
+}
+
+.seal-mark-box {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #DC2626;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #DC2626;
+  font-size: 0.82rem;
+  font-weight: 900;
+  transform: rotate(-6deg);
+  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.2);
+}
+
+/* =========================================================================
+   A4 인쇄 최적화 (@media print)
+   ========================================================================= */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 15mm 18mm 15mm 18mm;
+  }
+
+  body {
+    background: #FFFFFF !important;
+    padding: 0 !important;
+    color: #000000 !important;
+  }
+
+  .report-top-bar {
+    display: none !important;
+  }
+
+  .report-paper-container {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .report-section {
+    page-break-inside: avoid;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  .platform-card {
+    border: 1px solid #CBD5E1 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+
+  .kpi-grid, .qr-grid {
+    page-break-inside: avoid;
+  }
+}
+
+/* 모바일 화면 대응 */
+@media (max-width: 768px) {
+  .report-paper-container {
+    padding: 24px 18px;
+    margin: 10px;
+  }
+
+  .cover-title {
+    font-size: 1.45rem;
+  }
+
+  .cover-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .cover-meta-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 14px;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .qr-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report-seal-block {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+}
+
+
+/* ==========================================================================
+   화보형 이미지 갤러리 및 피규어 스타일
+   ========================================================================== */
+.report-figure {
+  margin: 20px 0 26px;
+  text-align: center;
+  page-break-inside: avoid;
+}
+
+.report-img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #CBD5E1;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.report-figure figcaption {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #475569;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+.report-img-card {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+  margin: 14px 0 10px;
+  box-shadow: 0 3px 10px rgba(0, 78, 162, 0.08);
+}
+
+.report-figure-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+  page-break-inside: avoid;
+}
+
+@media (max-width: 768px) {
+  .report-figure-grid {
+    grid-template-columns: 1fr;
+  }
+}

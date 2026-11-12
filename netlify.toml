@@ -1,0 +1,47 @@
+[build]
+  publish = "."
+
+# Netlify Edge Functions 설정
+[[edge_functions]]
+  path = "/api/info"
+  function = "api"
+
+[[edge_functions]]
+  path = "/api/recruit"
+  function = "recruit"
+
+# URL 리디렉트 / 프리티 URL 설정
+[[redirects]]
+  from = "/recruit"
+  to = "/recruit.html"
+  status = 200
+
+[[redirects]]
+  from = "/join"
+  to = "/recruit.html"
+  status = 200
+
+[[redirects]]
+  from = "/party-rules-bot"
+  to = "/party-rules-bot.html"
+  status = 200
+
+[[redirects]]
+  from = "/policy-chat"
+  to = "/party-rules-bot.html"
+  status = 200
+
+[[redirects]]
+  from = "/policy-quiz"
+  to = "/policy-quiz.html"
+  status = 200
+
+[[redirects]]
+  from = "/ai-academy"
+  to = "/ai-academy.html"
+  status = 200
+
+[[redirects]]
+  from = "/report"
+  to = "/report.html"
+  status = 200
