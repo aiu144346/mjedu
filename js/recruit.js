@@ -86,10 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     } else if (selectedRole === "자문교수단") {
       dynamicNotice.innerHTML = `
-        💡 <strong>[자문교수단 지원 안내]</strong> 교육연수위원회 강좌 기획 자문 및 특별 강의를 담당합니다. 학계·산업계·AI·문화예술 등 <strong>외부 전문가(비당원 포함)</strong> 누구나 참여하실 수 있으며, <strong>직책당비는 면제</strong>됩니다.
+        💡 <strong>[자문교수단 지원 안내]</strong> 교육연수위원회 강좌 기획 자문 및 특별 강의를 담당합니다. 학계·산업계·AI·문화예술 등 <strong>외부 전문가(비당원 포함)</strong> 누구나 참여하실 수 있습니다.
       `;
       duesConsentText.innerHTML = `
-        [자문교수단] 직책당비 면제 대상임을 확인하였으며, 교육연수위원회 강좌 기획·자문 활동에 동의합니다. <span style="color:#DC2626;">(필수)</span>
+        [자문교수단] 교육연수위원회 강좌 기획·자문 및 특별 강의 활동에 동의합니다. <span style="color:#DC2626;">(필수)</span>
       `;
       if (duesConsentBox) duesConsentBox.classList.remove("dues-consent-card");
       if (labelCareer) labelCareer.innerHTML = `전문 분야 · 소속/직함 및 강의 가능 주제 <span class="req">*</span>`;
@@ -197,14 +197,14 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!district) return showFormError("⚠️ 울산 거주 지역(또는 연고)을 선택해 주세요.");
       if (position !== "자문교수단" && partyStatus.includes("비당원")) {
         return showFormError(
-          "⚠️ 부위원장·분과위원장·일반위원은 더불어민주당 일반당원 또는 권리당원(입당 예정 포함)이어야 지원 가능합니다. (비당원은 자문교수단으로 지원 가능)"
+          "⚠️ 부위원장·분과위원장은 더불어민주당 일반당원 또는 권리당원(입당 예정 포함)이어야 지원 가능합니다. (비당원은 자문교수단으로 지원 가능)"
         );
       }
       if (!career) return showFormError("⚠️ 주요 경력 또는 전문 분야를 입력해 주세요.");
       if (!chkDues) return showFormError("⚠️ 직책당비 사전 안내 사항 확인 및 동의에 체크해 주세요.");
       if (!chkPrivacy) return showFormError("⚠️ 개인정보 수집 및 이용 동의에 체크해 주세요.");
 
-      let duesLabel = "해당없음(면제확인)";
+      let duesLabel = "자문교수단(강좌기획·강의)";
       if (position === "부위원장") duesLabel = "월 3만원 납부동의";
       else if (position === "분과위원장") duesLabel = "월 1만원 납부동의";
 
