@@ -328,14 +328,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const promoTextarea = document.getElementById("kakaoPromoText");
     const promoMessage = promoTextarea
       ? promoTextarea.value
-      : "더불어민주당 울산시당 교육연수위원회 위원을 공개모집합니다!\nhttps://polite-klepon-cab120.netlify.app/recruit";
+      : "더불어민주당 울산시당 교육연수위원회 위원을 공개모집합니다!\nhttps://aiu144346.github.io/mjedu/recruit";
 
     if (navigator.share) {
       try {
         await navigator.share({
           title: "[더불어민주당 울산시당 교육연수위원회] 위원 공개모집",
           text: promoMessage,
-          url: "https://polite-klepon-cab120.netlify.app/recruit",
+          url: "https://aiu144346.github.io/mjedu/recruit",
         });
         return;
       } catch (err) {
@@ -346,7 +346,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       await navigator.clipboard.writeText(promoMessage);
       alert(
-        "✅ 카카오톡 홍보 문구와 신청 전용 링크(https://polite-klepon-cab120.netlify.app/recruit)가 복사되었습니다!\n\n카카오톡 채팅방에 [붙여넣기]하여 바로 전송하실 수 있습니다."
+        "✅ 카카오톡 홍보 문구와 신청 전용 링크(https://aiu144346.github.io/mjedu/recruit)가 복사되었습니다!\n\n카카오톡 채팅방에 [붙여넣기]하여 바로 전송하실 수 있습니다."
       );
     } catch {
       if (promoTextarea) {
