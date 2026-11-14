@@ -86,12 +86,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     } else if (selectedRole === "더민주 AI 크리에이터") {
       dynamicNotice.innerHTML = `
-        💡 <strong>[더민주 AI 크리에이터 지원 안내]</strong> <strong>일반당원 또는 권리당원(울산 거주·연고)</strong>을 대상으로 하며, 울산시당 AI 강좌 보조강사 및 전문 강사 양성과정에 우선 선발되어 활동하게 됩니다.
+        💡 <strong>[더민주 AI 크리에이터 (분과위원장 혹은 교육연수위원회 위원) 지원 안내]</strong> <strong>일반당원 또는 권리당원(울산 거주·연고)</strong>을 대상으로 하며, 울산시당 AI 강좌 보조강사 및 전문 강사 양성과정에 우선 선발되어 활동합니다. 정당법 및 당규에 따라 <strong>월 1만 원의 직책당비</strong> 납부 의무가 부여됩니다.
       `;
       duesConsentText.innerHTML = `
-        [더민주 AI 크리에이터] 교육연수위원회의 AI 강좌 보조강사 및 강사 양성과정 활동에 성실히 참여할 것에 동의합니다. <span style="color:#DC2626;">(필수)</span>
+        [더민주 AI 크리에이터] 정당법 및 당규에 따른 직책당비(<strong>월 1만 원</strong>) 안내를 확인하였으며, 선임 시 납부 및 활동에 동의합니다. <span style="color:#DC2626;">(필수)</span>
       `;
-      if (duesConsentBox) duesConsentBox.classList.remove("dues-consent-card");
+      if (duesConsentBox) duesConsentBox.classList.add("dues-consent-card");
       if (labelCareer) labelCareer.innerHTML = `AI 활용 경험 및 관심 분야, 주요 사회 경력 <span class="req">*</span>`;
       if (partyStatusSelect && partyStatusSelect.value.includes("비당원")) {
         partyStatusSelect.value = "권리당원 (당비 납부 당원)";
@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let duesLabel = "자문교수단(강좌기획·강의)";
       if (position === "부위원장") duesLabel = "월 3만원 납부동의";
       else if (position === "분과위원장") duesLabel = "월 1만원 납부동의";
-      else if (position === "더민주 AI 크리에이터") duesLabel = "AI크리에이터(보조강사·강사양성)";
+      else if (position === "더민주 AI 크리에이터") duesLabel = "월 1만원 납부동의";
 
       const now = new Date();
       const yyyy = now.getFullYear();
