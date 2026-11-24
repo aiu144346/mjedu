@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>민주당헌 365 강의 슬라이드 | 강령·당헌·당규 실전 활용 가이드</title>
+  <meta name="description" content="2026.08.11 최신 개정 더불어민주당 강령·당헌·당규 당원 교육용 웹 슬라이드 프레젠테이션" />
+  <meta name="theme-color" content="#004EA2" />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="css/party-rules-lecture.css?v=20261122_1" />
+</head>
+<body>
+
+  <!-- =====================================================================
+       상단 발표자 컨트롤 바
+       ===================================================================== -->
+  <header class="deck-topbar">
+    <a href="party-rules-bot.html" class="topbar-brand" title="민주당헌 365 AI 자문관으로 이동">
+      <img src="더불어민주당 로고.png" alt="더불어민주당 로고" class="topbar-logo" />
+      <span class="topbar-title">민주당헌 365 강의안</span>
+      <span class="topbar-badge">2026.08.11 개정판</span>
+    </a>
+
+    <nav class="module-nav" aria-label="강의 모듈 바로가기">
+      <button type="button" class="module-pill active" data-target-module="intro" data-start-slide="0">도입</button>
+      <button type="button" class="module-pill" data-target-module="m1" data-start-slide="2">모듈1. 당원주권</button>
+      <button type="button" class="module-pill" data-target-module="m2" data-start-slide="6">모듈2. 앱 활용법</button>
+      <button type="button" class="module-pill" data-target-module="m3" data-start-slide="11">모듈3. 실전 Q&amp;A</button>
+      <button type="button" class="module-pill" data-target-module="m4" data-start-slide="19">모듈4. 실습·퀴즈</button>
+    </nav>
+
+    <div class="topbar-tools">
+      <button type="button" id="btnOpenQaCards" class="tool-btn">📚 13개 Q&amp;A</button>
+      <button type="button" id="btnOpenHandout" class="tool-btn">📄 1장 핸드아웃</button>
+      <a href="party-rules-bot.html" target="_blank" class="tool-btn primary">🤖 앱 라이브 시연 ↗</a>
+      <button type="button" id="btnOpenOverview" class="tool-btn" title="전체 슬라이드 목차 (G)">🗺️ 목차</button>
+      <button type="button" id="btnPrintDeck" class="tool-btn" title="인쇄 / PDF 저장">🖨️ PDF</button>
+      <button type="button" id="btnFullscreen" class="tool-btn" title="전체화면 (F)">⛶</button>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       슬라이드 스테이지 (총 22장)
+       ===================================================================== -->
+  <main class="deck-stage" id="deckStage">
+
+    <!-- ==================== SLIDE 01: 표지 ==================== -->
+    <section class="slide slide-cover active" data-module="intro" data-kicker="도입" data-title="표지: 민주당헌 365 실전 활용 가이드">
+      <div class="cover-grid">
+        <div>
+          <div class="cover-pill">🏛️ 더불어민주당 당원 교육 공식 강의안</div>
+          <h1 class="cover-title">
+            당원주권 시대,<br />
+            <span>‘민주당헌 365’</span>로 읽는<br />
+            강령·당헌·당규
+          </h1>
+          <p class="cover-desc">
+            410쪽 1,264개 조항의 강령·당헌·당규를 내 손안의 AI 자문관으로<br />
+            3초 만에 확인하고 원문과 대조하는 실전 활용 가이드
+          </p>
+          <div class="cover-meta-row">
+            <div class="cover-meta-chip">
+              <img src="JWJ_Profile_Image.png" alt="정우진" onerror="this.src='정우진1.jpg'" />
+              <span>기획·제작 정우진 (교육연수원)</span>
+            </div>
+            <div class="cover-meta-chip">📅 기준: 2026.08.11 최신 개정판</div>
+            <div class="cover-meta-chip">🏢 울산광역시당 교육연수위원회</div>
+          </div>
+        </div>
+        <div class="cover-visual-card">
+          <img src="assets/images/bot/bot_hero_banner.png" alt="민주당헌 365 AI 자문관" onerror="this.src='더불어민주당 로고.png'" />
+          <div class="cover-visual-caption">
+            신호등 핵심 판정(🟢/🟡/🔴/📘) +<br />1,264개 공식 조항 실시간 원문 대조
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 02: 목차 & 학습목표 ==================== -->
+    <section class="slide" data-module="intro" data-kicker="도입" data-title="오늘의 강의 목차 및 학습 목표">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">ORIENTATION</div>
+          <h2 class="slide-title">오늘의 강의 로드맵 &amp; 핵심 학습 목표</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 02</span>
+      </div>
+      <div class="slide-body">
+        <div class="step-row">
+          <div class="step-card">
+            <span class="step-num">모듈 1 · 15분</span>
+            <h4>당원주권과 당헌·당규</h4>
+            <p>강령·당헌·당규 3단 위계, 2026.08.11 개정 의의, 기본사회 &amp; 에너지고속도로 비전</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">모듈 2 · 20분</span>
+            <h4>‘민주당헌 365’ 완전정복</h4>
+            <p>4색 신호등 판정, 원문 인용 칩, 1,264조 법전 대조기, 큰글씨 모드 활용법</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">모듈 3 · 35분</span>
+            <h4>핵심 조항 &amp; 실전 Q&amp;A</h4>
+            <p>전적, 권리당원 투표권, 당원소환, 음주·학폭 부적격, 경선 가·감산, 징계 규정</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">모듈 4 · 20분</span>
+            <h4>현장 실습 &amp; 퀴즈 챌린지</h4>
+            <p>내 스마트폰 직접 질문 실습 및 ‘🏆 퀴즈 챌린지’ 연계 참여형 워크숍</p>
+          </div>
+        </div>
+        <div class="card card-blue">
+          <h3>🎯 오늘 강의를 마치면 할 수 있는 3가지</h3>
+          <div class="grid-3" style="margin-top: 8px;">
+            <div><strong>① 스스로 검증:</strong> 1,264개 조항을 3초 만에 검색하고 공식 원문과 대조할 수 있다.</div>
+            <div><strong>② 권리 수호:</strong> 권리당원 선거권, 전적, 당원소환 등 나의 권리와 의무를 정확히 숙지한다.</div>
+            <div><strong>③ 품격 있는 활동:</strong> 공천 부적격 기준과 윤리규범을 명확히 알고 건강한 당원 활동을 실천한다.</div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>더불어민주당 울산광역시당 교육연수위원회</span>
+        <span>민주당헌 365 실전 활용 강의안</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 03: 강령·당헌·당규 3단 위계 ==================== -->
+    <section class="slide" data-module="m1" data-kicker="모듈 1" data-title="강령·당헌·당규의 3단 위계 구조">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 01 · 당원주권 시대와 당헌·당규</div>
+          <h2 class="slide-title">정당 규범의 3단 위계: 강령 · 당헌 · 당규</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 03</span>
+      </div>
+      <div class="slide-body">
+        <div class="pyramid-stack">
+          <div class="pyramid-tier t1">
+            <div class="pyramid-label">🏛️ 1단계 · 강령 (철학과 비전)</div>
+            <div class="pyramid-desc">정당이 추구하는 시대정신, 핵심 가치, 국가 운영의 큰 방향<br /><em>예: 기본사회, 2050 탄소중립, 에너지고속도로</em></div>
+          </div>
+          <div class="pyramid-tier t2">
+            <div class="pyramid-label">📘 2단계 · 당헌 (정당의 헌법)</div>
+            <div class="pyramid-desc">당원의 권리와 의무, 당 기구 구성, 의사결정 및 공천의 근본 원칙<br /><em>예: 당헌 제5조(권리당원), 제7조의2(당원소환), 제14조(전국당원대회)</em></div>
+          </div>
+          <div class="pyramid-tier t3">
+            <div class="pyramid-label">📗 3단계 · 당규 &amp; 특별당규 (실무 규칙)</div>
+            <div class="pyramid-desc">당비 납부, 전적 절차, 공천 부적격 심사, 경선 가산·감산, 윤리심판 징계 등 세부 절차<br /><em>예: 당규 제2호(당원 및 당비규정), 공직선거후보자 추천 특별당규</em></div>
+          </div>
+        </div>
+        <div class="law-quote-box">
+          <strong>💡 핵심 포인트:</strong> 총 <strong>410여 쪽, 1,264개 조항</strong>으로 구성된 규범 체계는 하위 규정이 상위 규정의 정신을 구체화하며, 모든 당무와 공천은 이 조항의 법적 구속력 아래 운영됩니다.
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 1. 당원주권 시대와 당헌·당규의 이해</span>
+        <span>2026.08.11 최신 개정판 기준</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 04: 2026.08.11 개정 의의 ==================== -->
+    <section class="slide" data-module="m1" data-kicker="모듈 1" data-title="2026.08.11 최신 개정 의의: 당원주권 정당">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 01 · 2026.08.11 최신 개정 핵심</div>
+          <h2 class="slide-title">대의원 중심에서 ‘당원주권 정당’으로의 대전환</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 04</span>
+      </div>
+      <div class="slide-body">
+        <div class="grid-3">
+          <div class="stat-card">
+            <div class="stat-value">전국당원대회</div>
+            <div class="stat-label">최고 의결기구 명칭 개편</div>
+            <div class="stat-sub">기존 ‘전국대의원대회’에서 위상 격상<br />(당헌 제14조)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">20 : 1 미만</div>
+            <div class="stat-label">표의 등가성 대폭 강화</div>
+            <div class="stat-sub">대의원-권리당원 표 가치 격차 축소로<br />당심 왜곡 원천 방지</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">직접민주주의</div>
+            <div class="stat-label">전 당원 투표 &amp; 소환제</div>
+            <div class="stat-sub">주요 당헌·정책 온라인 전 당원 투표<br />및 선출직 당직자 당원소환제 보장</div>
+          </div>
+        </div>
+        <div class="law-quote-box">
+          <strong>📖 당헌 제14조(전국당원대회의 지위와 구성) ①항:</strong>
+          “전국당원대회는 더불어민주당의 최고대의기관으로서 당의 기본 노선과 정책을 결정하고 당헌을 제정·개정한다.”
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 1. 당원주권 시대와 당헌·당규의 이해</span>
+        <span>당헌 제14조 · 제7조의2</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 05: 강령 비전 ① 기본사회 ==================== -->
+    <section class="slide" data-module="m1" data-kicker="모듈 1" data-title="강령 핵심 비전 ①: 모두를 위한 기본사회">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 01 · 강령 핵심 비전 ①</div>
+          <h2 class="slide-title">모든 시민의 존엄을 보장하는 ‘기본사회’ 비전</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 05</span>
+      </div>
+      <div class="slide-body">
+        <div class="verdict-banner verdict-info">
+          📘 [강령 전문] 최소한의 생존 보장을 넘어, 소득·주거·금융·의료 등 삶의 기본 조건을 국가가 책임지는 포용 사회
+        </div>
+        <div class="grid-4">
+          <div class="card">
+            <h3>💰 기본소득</h3>
+            <p>양극화와 불평등 해소를 위한 보편적·생애주기별 소득 안전망 확충</p>
+          </div>
+          <div class="card">
+            <h3>🏠 기본주거</h3>
+            <p>공공임대주택 확충을 중심으로 누구나 안심하고 살 수 있는 주거권 보장</p>
+          </div>
+          <div class="card">
+            <h3>🏦 기본금융</h3>
+            <p>고금리·금융 소외 계층의 경제적 자립을 돕는 서민 기본금융 지원</p>
+          </div>
+          <div class="card">
+            <h3>🏥 기본의료·돌봄</h3>
+            <p>질병과 돌봄의 불안을 국가가 함께 책임지는 촘촘한 사회안전망 완성</p>
+          </div>
+        </div>
+        <div class="law-quote-box">
+          <strong>➕ 을(乙)의 기본권 보장:</strong> 자영업자·소상공인·플랫폼 노동자의 교섭권과 사회안전망 구축 <span class="cite-pill">강령 전문 · 정책 3</span>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 1. 당원주권 시대와 당헌·당규의 이해</span>
+        <span>강령 전문 · 정책 3</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 06: 강령 비전 ② 탄소중립 & 에너지고속도로 ==================== -->
+    <section class="slide" data-module="m1" data-kicker="모듈 1" data-title="강령 핵심 비전 ②: 2050 탄소중립과 에너지고속도로">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 01 · 강령 핵심 비전 ②</div>
+          <h2 class="slide-title">2050 탄소중립, RE100 및 지능형 에너지고속도로</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 06</span>
+      </div>
+      <div class="slide-body">
+        <div class="grid-2">
+          <div class="card card-blue">
+            <h3>🌱 탄소중립 &amp; 탈석탄 공식 로드맵</h3>
+            <ul class="clean-list">
+              <li><strong>2040년 탈석탄:</strong> 석탄화력발전소 단계적 폐지 추진</li>
+              <li><strong>2050년 넷제로(Net-Zero):</strong> 국가 탄소중립 목표 성실 이행</li>
+              <li><strong>녹색산업 대전환:</strong> 기후위기를 인류 존망 과제로 인식하고 미래 신산업 성장 동력 확보</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>⚡ 에너지고속도로 &amp; 정의로운 전환</h3>
+            <ul class="clean-list">
+              <li><strong>지능형 에너지고속도로:</strong> 분산형 신재생에너지 전력망(그리드) 구축 및 RE100 산업 경쟁력 강화</li>
+              <li><strong>정의로운 전환:</strong> 에너지 전환 과정에서 피해를 입는 노동자·중소기업 대상 국가적 재교육 및 대체산업 지원</li>
+            </ul>
+          </div>
+        </div>
+        <div class="law-quote-box">
+          <strong>📖 강령 정책 8 (기후위기 극복과 생태전환):</strong>
+          “2050 탄소중립 목표를 성실히 이행하고 2040년까지 탈석탄을 추진하며, 재생에너지를 기반으로 한 지능형 에너지고속도로를 구축한다.”
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 1. 당원주권 시대와 당헌·당규의 이해</span>
+        <span>강령 정책 8</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 07: 왜 민주당헌 365 AI인가? ==================== -->
+    <section class="slide" data-module="m2" data-kicker="모듈 2" data-title="왜 ‘민주당헌 365’ AI 자문관이 필요한가?">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 02 · ‘민주당헌 365’ AI 앱 완전 정복</div>
+          <h2 class="slide-title">왜 ‘민주당헌 365’ AI 자문관이 필요한가?</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 07</span>
+      </div>
+      <div class="slide-body">
+        <div class="grid-2">
+          <div class="card" style="border-top: 4px solid #94A3B8;">
+            <h3 style="color: #475569;">😥 기존의 어려움 (Before)</h3>
+            <ul class="clean-list">
+              <li>410여 쪽, <strong>1,264개 조항</strong>의 방대한 PDF 문서</li>
+              <li>수시로 개정되는 당헌·특별당규 조항을 일반 당원이 직접 찾기 어려움</li>
+              <li>단톡방·구전 등 부정확한 ‘카더라’ 해석으로 인한 현장 혼선 발생</li>
+            </ul>
+          </div>
+          <div class="card card-blue" style="border-top: 4px solid var(--dp-blue);">
+            <h3>🚀 앱 도입 후 변화 (After)</h3>
+            <ul class="clean-list">
+              <li><strong>3초 내 즉답:</strong> 일상 언어로 물어도 핵심 결론과 신호등 판정 즉시 제시</li>
+              <li><strong>100% 원문 근거:</strong> 모든 답변마다 공식 조·항·호 전문을 실시간 대조 가능</li>
+              <li><strong>시니어 친화 UX:</strong> 스마트폰 최적화 및 <strong>‘가+ 큰글씨 모드’</strong> 기본 탑재</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 2. ‘민주당헌 365’ AI 앱 완전 정복</span>
+        <span>http://localhost:3000/party-rules-bot</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 08: 화면 구성 한눈에 보기 ==================== -->
+    <section class="slide" data-module="m2" data-kicker="모듈 2" data-title="앱 화면 구성 한눈에 보기 (듀얼 패널)">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 02 · 인터페이스 구조</div>
+          <h2 class="slide-title">화면 구성 한눈에 보기 (좌측 AI 채팅 + 우측 법전 대조기)</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 08</span>
+      </div>
+      <div class="slide-body">
+        <div class="grid-2">
+          <div class="card">
+            <h3>💬 좌측 메인 패널: AI 자동응답 자문관</h3>
+            <ul class="clean-list">
+              <li><strong>⚡ 추천 질문 칩 바 (상단):</strong> 가로 스크롤 칩 클릭 한 번으로 핵심 13개 질문 즉시 실행</li>
+              <li><strong>신호등 답변 카드:</strong> 결론 배지 + 쉬운 단계별 해설 + 근거 조항 칩 제공</li>
+              <li><strong>하단 질문 입력창:</strong> 궁금한 상황이나 키워드를 자유롭게 입력</li>
+            </ul>
+          </div>
+          <div class="card card-blue">
+            <h3>📖 우측 패널: 당헌·당규 실시간 원문 대조기</h3>
+            <ul class="clean-list">
+              <li><strong>🔍 현재 근거 조항 탭:</strong> 방금 받은 답변의 근거 조항 원문 및 핵심 문구 형광 하이라이트</li>
+              <li><strong>📚 전체 법전 (1,264조) 탭:</strong> 강령·당헌·당규 전 조항 키워드 실시간 검색</li>
+              <li><strong>모바일 대응:</strong> 우측 상단 📖 아이콘 클릭 시 하단 바텀시트로 즉시 열림</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card card-dark" style="padding: 14px 20px;">
+          <div style="display:flex; flex-wrap:wrap; gap:18px; align-items:center; justify-content:space-between;">
+            <strong>✨ 상단 유틸리티 3대 버튼</strong>
+            <span>🔤 <strong>가+ 큰글씨 모드</strong> (어르신 배려)</span>
+            <span>📖 <strong>법전 대조기</strong> (원문 열기/닫기)</span>
+            <span>🏆 <strong>퀴즈 챌린지</strong> (학습 점검 연동)</span>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 2. ‘민주당헌 365’ AI 앱 완전 정복</span>
+        <span>PC 듀얼뷰 · 모바일 바텀시트 완벽 지원</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 09: 4색 신호등 판정 ==================== -->
+    <section class="slide" data-module="m2" data-kicker="모듈 2" data-title="핵심 기능 ①: 4색 신호등 판정 시스템">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 02 · 핵심 기능 ①</div>
+          <h2 class="slide-title">결론을 1초 만에 파악하는 ‘4색 신호등 판정’</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 09</span>
+      </div>
+      <div class="slide-body">
+        <div class="grid-2">
+          <div class="verdict-banner verdict-positive" style="flex-direction:column; align-items:flex-start; gap:6px; padding:18px;">
+            <div style="font-size:1.1rem;">🟢 가능 / 허용 (Positive)</div>
+            <div style="font-weight:500; font-size:0.9rem;">당원이 절차에 따라 정당하게 신청·행사할 수 있는 권리<br /><em>예: 시·도당 전적 신청, 선출직 당직자 당원소환 청구</em></div>
+          </div>
+          <div class="verdict-banner verdict-warning" style="flex-direction:column; align-items:flex-start; gap:6px; padding:18px;">
+            <div style="font-size:1.1rem;">🟡 조건부 / 주의 (Warning)</div>
+            <div style="font-weight:500; font-size:0.9rem;">입당 시점·당비 납부 횟수 등 필수 요건 충족이 필요한 사안<br /><em>예: 권리당원 투표권 자격, 일반·직책당비 납부 의무</em></div>
+          </div>
+          <div class="verdict-banner verdict-danger" style="flex-direction:column; align-items:flex-start; gap:6px; padding:18px;">
+            <div style="font-size:1.1rem;">🔴 엄격 제한 / 부적격 (Danger)</div>
+            <div style="font-weight:500; font-size:0.9rem;">공천 원천 배제, 경선 감산, 징계 대상 등 무관용 규정<br /><em>예: 음주운전, 학폭·성비위, 공천 불복 탈당, 윤리심판 징계</em></div>
+          </div>
+          <div class="verdict-banner verdict-info" style="flex-direction:column; align-items:flex-start; gap:6px; padding:18px;">
+            <div style="font-size:1.1rem;">📘 제도 / 강령 정보 (Info)</div>
+            <div style="font-weight:500; font-size:0.9rem;">당 기구 운영 절차, 경선 가산·감산 룰, 당 강령 정책 비전<br /><em>예: 전국당원대회, 비대위 설치, 가산·감산 룰, 기본사회</em></div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 2. ‘민주당헌 365’ AI 앱 완전 정복</span>
+        <span>직관적 신호등 배지 시스템</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 10: 원문 칩 & 법전 대조기 ==================== -->
+    <section class="slide" data-module="m2" data-kicker="모듈 2" data-title="핵심 기능 ②: 원문 근거 칩 & 법전 대조기">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 02 · 핵심 기능 ②</div>
+          <h2 class="slide-title">근거 조항 칩 클릭 한 번으로 ‘원문 법전 대조’</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 10</span>
+      </div>
+      <div class="slide-body">
+        <div class="grid-3">
+          <div class="step-card">
+            <span class="step-num">STEP 1</span>
+            <h4>답변 속 인용 칩 터치</h4>
+            <p>해설 문장 끝에 붙은 <span class="cite-pill">[📗 당규 제2호 제12조 ①항 ↗]</span> 버튼을 클릭합니다.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">STEP 2</span>
+            <h4>원문 대조기 자동 포커스</h4>
+            <p>우측 법전 대조기가 열리며 해당 조항의 <strong>공식 원문 전문</strong>과 핵심 구절 하이라이트가 표시됩니다.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">STEP 3</span>
+            <h4>전체 1,264조 키워드 검색</h4>
+            <p><strong>📚 전체 법전</strong> 탭에서 <em>“당비”, “경선”, “윤리심판원”</em> 등 원하는 단어로 원문을 직접 검색합니다.</p>
+          </div>
+        </div>
+        <div class="law-quote-box">
+          <strong>✅ 신뢰성의 핵심:</strong> AI가 임의로 지어내는 답변(환각)이 아니라, <strong>2026.08.11 공식 당헌·당규 원문 데이터</strong>와 1:1로 연결되어 있어 회의·공천·민원 현장에서 공식 근거로 바로 제시할 수 있습니다.
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 2. ‘민주당헌 365’ AI 앱 완전 정복</span>
+        <span>엘박스형 실시간 원문 대조 뷰어</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 11: 똑똑하게 질문하는 3가지 팁 ==================== -->
+    <section class="slide" data-module="m2" data-kicker="모듈 2" data-title="AI 자문관에게 똑똑하게 질문하는 3가지 팁">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 02 · 실전 검색 노하우</div>
+          <h2 class="slide-title">AI 자문관에게 똑똑하게 질문하는 3가지 팁</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 11</span>
+      </div>
+      <div class="slide-body">
+        <div class="grid-3">
+          <div class="card card-blue">
+            <h3>1️⃣ 상황 그대로 물어보기</h3>
+            <p style="margin-bottom:10px;">어려운 법률 용어를 몰라도 평소 말하듯 편하게 질문하세요.</p>
+            <div class="law-quote-box" style="background:#FFFFFF;">
+              “경남도당 당원인데 경주시로 사업장을 옮겼어요. 도당을 어떻게 바꾸나요?”
+            </div>
+          </div>
+          <div class="card">
+            <h3>2️⃣ 핵심 키워드 조합하기</h3>
+            <p style="margin-bottom:10px;">단어 2~3개만 조합해 입력해도 가장 정확한 조항을 찾아줍니다.</p>
+            <div class="law-quote-box" style="background:#FFFFFF;">
+              • 권리당원 투표권 당비 횟수<br />
+              • 음주운전 공천 기준<br />
+              • 청년 가산점 하위 감산
+            </div>
+          </div>
+          <div class="card">
+            <h3>3️⃣ 상단 추천 칩부터 클릭</h3>
+            <p style="margin-bottom:10px;">무엇을 물을지 막막할 땐 상단 <strong>⚡ 추천 질문 칩</strong>을 눌러보세요.</p>
+            <div class="law-quote-box" style="background:#FFFFFF;">
+              🏡 당원 전적 · 🗳️ 투표권 조건<br />
+              🚫 음주운전 · ⚖️ 당원 소환제 등 13개 핵심 시나리오 원클릭 실행
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 2. ‘민주당헌 365’ AI 앱 완전 정복</span>
+        <span>자연어 질문 · 키워드 · 추천 칩 3단 지원</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 12: [실전 Q&A ①] 전적 절차 ==================== -->
+    <section class="slide" data-module="m3" data-kicker="모듈 3" data-title="[당원 권리 ①] 소속 시·도당 변경(전적) 절차">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 03 · 실전 Q&amp;A ① 당원 권리</div>
+          <h2 class="slide-title">소속 시·도당 변경(전적) 및 거주지·사업장 이전 절차</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 12</span>
+      </div>
+      <div class="slide-body">
+        <div class="qa-question-box">
+          Q. 거주지나 사업장을 다른 지역으로 이전하여 소속 시·도당을 변경(전적)하려면 어떻게 해야 하나요?
+        </div>
+        <div class="verdict-banner verdict-positive">
+          🟢 [가능 / 전적 절차] 거주지·사업장 증빙과 함께 &lt;별지 제3호&gt; 전적원 제출 시 14일 이내 전적 완료
+        </div>
+        <div class="step-row">
+          <div class="step-card">
+            <span class="step-num">1. 전적원 제출</span>
+            <h4>기존 시·도당 / 중앙당</h4>
+            <p>온라인 당원존·팩스·우편·방문으로 &lt;별지 제3호&gt; 전적원 제출</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">2. 증빙 첨부</span>
+            <h4>이전 사실 확인</h4>
+            <p>주민등록등·초본(거주지) 또는 사업자등록증 사본(사업장) 첨부</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">3. 이첩 및 심사</span>
+            <h4>14일 내 처리</h4>
+            <p>지체 없이 대상 시·도당 이첩, 접수일로부터 14일 내 심사·결정(20일 내 통지)</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">4. 권리 승계</span>
+            <h4>거부 금지</h4>
+            <p>정당한 사유 없이 거부 불가, 기존 당비 이력 및 권리당원 자격 그대로 유지</p>
+          </div>
+        </div>
+        <div class="law-quote-box">
+          <strong>📖 근거 조항:</strong> 당규 제2호 제12조(전적) ①·②·⑤·⑥항 · 당규 제2호 제14조(입당·복당·전적의 결정) ②항
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 3. 당원 필수 관심사별 핵심 조항 &amp; 실전 Q&amp;A</span>
+        <span>Card 01 · 당규 제2호 제12조·제14조</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 13: [실전 Q&A ②] 권리당원 투표권 & 당비 ==================== -->
+    <section class="slide" data-module="m3" data-kicker="모듈 3" data-title="[당원 권리 ②] 권리당원 투표권 자격 & 당비 기준">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 03 · 실전 Q&amp;A ② 당원 권리·의무</div>
+          <h2 class="slide-title">권리당원 투표권 자격 요건 &amp; 당비 납부 기준</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 13</span>
+      </div>
+      <div class="slide-body">
+        <div class="qa-question-box">
+          Q. 경선 투표권을 행사하려면 당비를 언제부터 몇 번 내야 하나요? 당비 미납 시 불이익은?
+        </div>
+        <div class="verdict-banner verdict-warning">
+          🟡 [조건부 가능 / 의무 준수] 6개월 이전 입당 + 12개월 내 6회 이상 정기 당비 납부 필수
+        </div>
+        <div class="grid-2">
+          <div class="card card-blue">
+            <h3>🗳️ 권리당원 선거권 2대 필수 요건</h3>
+            <ul class="clean-list">
+              <li><strong>입당 시점:</strong> 권리행사 시행일 기준 <strong>6개월 이전</strong> 입당 승인 <span class="cite-pill">당헌 제5조 ②항</span></li>
+              <li><strong>납부 횟수:</strong> 시행일 전 <strong>12개월 이내 6회 이상</strong> 정기 납부 <span class="cite-pill">당규 제2호 제12조</span></li>
+              <li><strong>주의사항:</strong> 미납 당비를 일시에 몰아 내더라도 월별 횟수 미충족 시 선거권 제한 가능</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>💳 당비 종류 및 미납 시 조치</h3>
+            <ul class="clean-list">
+              <li><strong>일반당비:</strong> 매월 <strong>1,000원 이상</strong> 자동이체·정기결제 납부 <span class="cite-pill">당규 제2호 제10조</span></li>
+              <li><strong>직책당비:</strong> 국회의원·지방의원·단체장·주요 당직자 별도 납부 의무</li>
+              <li><strong>미납 제재:</strong> 직책당비 <strong>3개월 이상 체납 시</strong> 피선거권 및 공직후보 추천 심사 배제</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 3. 당원 필수 관심사별 핵심 조항 &amp; 실전 Q&amp;A</span>
+        <span>Card 02 · Card 11 · 당헌 제5조 · 당규 제2호</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 14: [실전 Q&A ③] 당원소환제 ==================== -->
+    <section class="slide" data-module="m3" data-kicker="모듈 3" data-title="[당원 주권] 선출직 당직자 당원소환제">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 03 · 실전 Q&amp;A ③ 당원주권 제도</div>
+          <h2 class="slide-title">선출직 당직자에 대한 ‘당원소환제’ 청구 요건</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 14</span>
+      </div>
+      <div class="slide-body">
+        <div class="qa-question-box">
+          Q. 당 대표나 최고위원, 시·도당위원장 등 선출직 당직자를 당원들이 직접 소환할 수 있나요?
+        </div>
+        <div class="verdict-banner verdict-positive">
+          🟢 [가능] 당헌 제7조의2에 따라 권리당원 서명으로 선출직 당직자 소환 투표 청구 가능
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>🎯 소환 대상</h3>
+            <p>당대표, 최고위원, 시·도당위원장 등 당내 <strong>모든 선출직 당직자</strong></p>
+          </div>
+          <div class="card">
+            <h3>⚖️ 소환 청구 사유</h3>
+            <p>법령 및 당헌·당규·윤리규범을 위반하여 당의 존립을 위태롭게 하거나 명예를 현저히 훼손한 경우</p>
+          </div>
+          <div class="card card-blue">
+            <h3>⚡ 소환 가결 효력</h3>
+            <p>소환투표 가결 시 해당 당직자는 <strong>즉시 직위를 상실</strong>하며 차기 피선거권이 제한됨</p>
+          </div>
+        </div>
+        <div class="law-quote-box">
+          <strong>📖 당헌 제7조의2(당원소환) ①항:</strong>
+          “당원은 법령 및 당헌·당규, 윤리규범을 위반하여 당의 존립을 위태롭게 하거나 당의 명예를 현저히 훼손한 선출직 당직자에 대하여 소환을 청구할 수 있다.”
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 3. 당원 필수 관심사별 핵심 조항 &amp; 실전 Q&amp;A</span>
+        <span>Card 05 · 당헌 제7조의2</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 15: [실전 Q&A ④] 비상대책위원회 ==================== -->
+    <section class="slide" data-module="m3" data-kicker="모듈 3" data-title="[당 기구·의결] 비상대책위원회 설치 사유와 절차">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 03 · 실전 Q&amp;A ④ 당 기구·의결</div>
+          <h2 class="slide-title">비상대책위원회(비대위) 설치 사유 및 권한</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 15</span>
+      </div>
+      <div class="slide-body">
+        <div class="qa-question-box">
+          Q. 당대표가 궐위되거나 당 지도부가 총사퇴하면 비상대책위원회는 어떻게 꾸려지나요?
+        </div>
+        <div class="verdict-banner verdict-info">
+          📘 [공식 절차] 당대표 궐위 및 최고위원회 기능 상실 시 ‘당무위원회 의결’로 비대위 설치
+        </div>
+        <div class="grid-3">
+          <div class="step-card">
+            <span class="step-num">1단계 · 비상상황</span>
+            <h4>최고위 기능 상실</h4>
+            <p>당대표 궐위 또는 최고위원 다수 사퇴 등으로 정상적인 지도부 운영이 불가능한 경우</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">2단계 · 설치 의결</span>
+            <h4>당무위원회 의결</h4>
+            <p>당무위원회의 공식 의결을 통해 비상대책위원회 설치 및 비대위원장 임명</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">3단계 · 권한 승계</span>
+            <h4>최고위 해산 &amp; 전대 준비</h4>
+            <p>설치와 동시에 기존 최고위 해산, 비대위원장이 당대표 권한 행사 및 임시전국당원대회 준비</p>
+          </div>
+        </div>
+        <div class="law-quote-box">
+          <strong>📖 당헌 제25조(비상대책위원회) ①~②항:</strong>
+          “비상대책위원회의 설치와 동시에 최고위원회는 해산되며, 비상대책위원장은 당대표의 권한을 행사한다.”
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 3. 당원 필수 관심사별 핵심 조항 &amp; 실전 Q&amp;A</span>
+        <span>Card 07 · 당헌 제25조</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 16: [실전 Q&A ⑤] 음주운전·학폭·성비위 부적격 ==================== -->
+    <section class="slide" data-module="m3" data-kicker="모듈 3" data-title="[공천 심사 ①] 음주운전·학폭·성비위 무관용 부적격">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 03 · 실전 Q&amp;A ⑤ 공천 적격 심사</div>
+          <h2 class="slide-title">음주운전 · 학폭 · 성폭력 · 갑질 ‘무관용 부적격’ 기준</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 16</span>
+      </div>
+      <div class="slide-body">
+        <div class="verdict-banner verdict-danger">
+          🔴 [예외 없는 부적격 / 원스트라이크 아웃] 윤창호법 이후 음주운전 1회, 성비위(기소유예 포함) 원천 배제
+        </div>
+        <table class="deck-table">
+          <thead>
+            <tr>
+              <th style="width: 18%;">심사 분야</th>
+              <th>공직선거후보자 부적격 적용 기준</th>
+              <th style="width: 24%;">근거 조항</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>🚗 음주운전</strong></td>
+              <td>
+                • <strong>2018.12.18.(윤창호법 시행) 이후</strong> 면허취소·정지 1회라도 예외 없는 부적격<br />
+                • 선거일 전 <strong>15년 이내 3회 이상</strong> 또는 <strong>10년 이내 2회 이상</strong> 적발<br />
+                • 음주 측정 거부 및 사고 후 도주(뺑소니)는 시기와 무관하게 엄격 배제
+              </td>
+              <td>특별당규 별표 제1호 제7호<br />당헌 제84조 ③항</td>
+            </tr>
+            <tr>
+              <td><strong>🚫 성범죄·폭력</strong></td>
+              <td>성폭력, 성매매, 가정폭력, 아동학대 범죄 경력자는 <strong>기소유예 포함</strong> 예외 없는 부적격</td>
+              <td>특별당규 별표 제1호 제1~4호</td>
+            </tr>
+            <tr>
+              <td><strong>🏫 학폭·갑질</strong></td>
+              <td>본인·직계비속의 중대한 학교폭력 가해, 우월적 지위 남용 직장 내 괴롭힘·폭언 시 부적격 또는 감산</td>
+              <td>윤리규범 제14조</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 3. 당원 필수 관심사별 핵심 조항 &amp; 실전 Q&amp;A</span>
+        <span>Card 03 · Card 04 · 특별당규 별표 제1호</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 17: [실전 Q&A ⑥] 경선 가산·감산 룰 ==================== -->
+    <section class="slide" data-module="m3" data-kicker="모듈 3" data-title="[공천 심사 ②] 경선 가산점 & 하위자 감산 룰">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 03 · 실전 Q&amp;A ⑥ 공천 경선 룰</div>
+          <h2 class="slide-title">공직선거 경선 시 신인·여성·청년 가산 &amp; 하위자 감산</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 17</span>
+      </div>
+      <div class="slide-body">
+        <div class="verdict-banner verdict-info">
+          📘 [공식 룰] 소수자·정치신인 진입 확대(최대 25% 가산) vs 선출직 의정평가 하위자 엄격 감산(20~30%)
+        </div>
+        <div class="grid-2">
+          <div class="card card-blue">
+            <h3>➕ 득표수 가산 (신인·소수자 우대)</h3>
+            <ul class="clean-list">
+              <li><strong>여성 · 청년 · 중증장애인:</strong> 본인 경선 득표수의 <strong>최대 25%</strong> 가산</li>
+              <li><strong>순수 정치신인 (중복 미해당):</strong> 본인 경선 득표수의 <strong>10 ~ 20%</strong> 가산</li>
+            </ul>
+          </div>
+          <div class="card" style="background:#FEF2F2; border-color:#FECACA;">
+            <h3 style="color:#991B1B;">➖ 득표수 감산 (엄격 평가·책임)</h3>
+            <ul class="clean-list">
+              <li><strong>의정평가 하위 10% 미만:</strong> 본인 득표수의 <strong>30% 감산</strong></li>
+              <li><strong>의정평가 하위 10% ~ 20% 미만:</strong> 본인 득표수의 <strong>20% 감산</strong></li>
+              <li><strong>공천 불복 탈당 경력자:</strong> 별도 <strong>25% 감산</strong> 중복 합산 가능</li>
+            </ul>
+          </div>
+        </div>
+        <div class="law-quote-box">
+          <strong>📖 특별당규 제16조(후보자 선출의 가산 및 감산) ②~④항:</strong>
+          여성·청년·중증장애인·정치신인은 100분의 10~25 가산, 선출직공직자평가 하위 100분의 20 해당자는 100분의 20 이상 감산
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 3. 당원 필수 관심사별 핵심 조항 &amp; 실전 Q&amp;A</span>
+        <span>Card 12 · 특별당규 제16조</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 18: [실전 Q&A ⑦] 공천 불복 탈당 & 복당 제한 ==================== -->
+    <section class="slide" data-module="m3" data-kicker="모듈 3" data-title="[징계·윤리 ①] 공천 불복 탈당 & 복당 제한">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 03 · 실전 Q&amp;A ⑦ 징계·윤리 규범</div>
+          <h2 class="slide-title">공천 불복 탈당 및 징계 회피 탈당자의 복당 제한</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 18</span>
+      </div>
+      <div class="slide-body">
+        <div class="qa-question-box">
+          Q. 공천 결과에 불복하여 탈당하거나 무소속 출마한 사람은 다시 민주당에 복당할 수 있나요?
+        </div>
+        <div class="verdict-banner verdict-danger">
+          🔴 [엄격 제한] 원칙적 복당 불허(3~5년 제한) 및 특별 승인 복당 시에도 경선 25% 감산
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>⏳ 1. 복당 제한 기간</h3>
+            <p>공천 불복 탈당자나 징계 회피 탈당자는 탈당일로부터 통상 <strong>3~5년간</strong> 복당이 제한됩니다.</p>
+          </div>
+          <div class="card">
+            <h3>🔍 2. 이중 심사 절차</h3>
+            <p>시·도당 <strong>당원자격심사위원회</strong> 심사 + 중앙당 <strong>최고위원회</strong>의 엄격한 의결을 모두 거쳐야 합니다.</p>
+          </div>
+          <div class="card" style="background:#FEF2F2; border-color:#FECACA;">
+            <h3 style="color:#991B1B;">📉 3. 경선 25% 감산</h3>
+            <p>복당이 허용되더라도 차기 공직선거 경선에서 본인이 획득한 득표수의 <strong>25% 감산</strong> 제재가 적용됩니다.</p>
+          </div>
+        </div>
+        <div class="law-quote-box">
+          <strong>📖 당헌 제84조 ⑤항 · 당규 제2호 제14조 ②항:</strong>
+          “당의 결정에 불복하여 탈당한 경력이 있는 자에 대하여는 후보자 선출 경선 시 본인이 획득한 득표수의 100분의 25를 감산한다.”
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 3. 당원 필수 관심사별 핵심 조항 &amp; 실전 Q&amp;A</span>
+        <span>Card 08 · 당규 제2호 제14조 · 당헌 제84조</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 19: [실전 Q&A ⑧] 윤리심판원 징계 절차 ==================== -->
+    <section class="slide" data-module="m3" data-kicker="모듈 3" data-title="[징계·윤리 ②] 윤리규범 14대 수칙 & 징계 절차">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 03 · 실전 Q&amp;A ⑧ 윤리심판원</div>
+          <h2 class="slide-title">윤리규범 위반 시 ‘윤리심판원’ 5단계 징계 절차</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 19</span>
+      </div>
+      <div class="slide-body">
+        <div class="verdict-banner verdict-danger">
+          🔴 [무관용 징계] 독립 기구 윤리심판원(외부인사 50% 이상)을 통해 경고부터 영구 제명까지 5단계 징계
+        </div>
+        <div>
+          <div style="font-size:0.86rem; font-weight:800; color:#475569; margin-bottom:8px;">⚖️ 징계 5대 종류 (경중 순 · 당규 제1호 제14조 ①항)</div>
+          <div class="penalty-ladder">
+            <div class="ladder-item ladder-1">1단계<br />경고</div>
+            <div class="ladder-item ladder-2">2단계<br />당직직위해제</div>
+            <div class="ladder-item ladder-3">3단계<br />당직자격정지</div>
+            <div class="ladder-item ladder-4">4단계<br />당원자격정지<br /><span style="font-size:0.74rem;font-weight:600;">(1개월~2년)</span></div>
+            <div class="ladder-item ladder-5">5단계 (최고)<br />제명<br /><span style="font-size:0.74rem;font-weight:500;">(영구 축출)</span></div>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="card card-blue">
+            <h3>🛡️ 심판 독립성 보장</h3>
+            <p>윤리심판원은 <strong>외부 인사 50% 이상</strong>으로 구성되어 당 지도부의 영향 없이 독립적으로 공정 판정</p>
+          </div>
+          <div class="card">
+            <h3>📩 불복 시 재심 청구</h3>
+            <p>시·도당 윤리심판원 결정에 불복할 경우 결정문 송달일로부터 <strong>7일 이내</strong> 중앙당 윤리심판원 재심 청구 가능</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 3. 당원 필수 관심사별 핵심 조항 &amp; 실전 Q&amp;A</span>
+        <span>Card 13 · 당규 제1호 제14조</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 20: 현장 스마트폰 실습 ==================== -->
+    <section class="slide" data-module="m4" data-kicker="모듈 4" data-title="[현장 실습] 내 스마트폰으로 직접 물어보기">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 04 · 참여형 현장 실습 (10분)</div>
+          <h2 class="slide-title">📱 내 스마트폰으로 ‘민주당헌 365’ 직접 체험하기</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 20</span>
+      </div>
+      <div class="slide-body">
+        <div class="grid-3">
+          <div class="step-card">
+            <span class="step-num">미션 1 · 접속 &amp; 설정</span>
+            <h4>앱 열기 &amp; 큰글씨 모드</h4>
+            <p>배포된 1장 핸드아웃의 QR코드로 접속 후, 글자가 작다면 우측 상단 <strong>‘가+ 큰글씨 모드’</strong>를 켜보세요.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">미션 2 · 질문 &amp; 대조</span>
+            <h4>투표권 조건 원문 확인</h4>
+            <p><em>“권리당원 투표권 조건”</em>을 질문하고, 답변 속 <strong>[📘 당헌 제5조 ②항 ↗]</strong> 칩을 눌러 원문 법전 대조기를 열어보세요.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">미션 3 · 자유 질문</span>
+            <h4>나의 궁금증 해결하기</h4>
+            <p>평소 궁금했던 당비, 전적, 공천 기준, 기본사회 등 나만의 질문을 직접 입력해 신호등 판정을 확인해 보세요.</p>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:8px;">
+          <a href="party-rules-bot.html" target="_blank" class="tool-btn primary" style="padding:14px 28px; font-size:1.02rem; border-radius:12px;">
+            🤖 지금 바로 ‘민주당헌 365 AI 자문관’ 열기 ↗
+          </a>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 4. 현장 실습 및 퀴즈 챌린지</span>
+        <span>실시간 스마트폰 실습 워크숍</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 21: 퀴즈 챌린지 연계 ==================== -->
+    <section class="slide" data-module="m4" data-kicker="모듈 4" data-title="[참여 워크숍] 🏆 정책·당헌 퀴즈 챌린지">
+      <div class="slide-header">
+        <div>
+          <div class="slide-kicker">MODULE 04 · 참여형 학습 평가 (10분)</div>
+          <h2 class="slide-title">🏆 ‘정책·당헌 퀴즈 챌린지’로 실력 점검하기</h2>
+        </div>
+        <span class="slide-num-badge">SLIDE 21</span>
+      </div>
+      <div class="slide-body">
+        <div class="grid-2">
+          <div class="card card-blue">
+            <h3>🎯 퀴즈 챌린지 진행 방식</h3>
+            <ul class="clean-list">
+              <li>앱 상단의 <strong>‘🏆 퀴즈 챌린지’</strong> 버튼 클릭 (`policy-quiz`)</li>
+              <li>오늘 배운 강령·당헌·당규 핵심 조항 중심의 실전 문항 풀이</li>
+              <li>문항별 즉각적인 정답 해설 및 근거 조항 복습으로 장기 기억 완성</li>
+              <li>현장 우수 참여자·만점자 격려 및 소감 공유</li>
+            </ul>
+          </div>
+          <div class="card card-dark" style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; gap:16px;">
+            <div style="font-size:3rem;">🏆</div>
+            <h3 style="margin:0; font-size:1.25rem;">지금 바로 퀴즈에 도전하세요!</h3>
+            <p style="font-size:0.9rem;">당원주권의 품격은 정확한 당헌·당규 이해에서 시작됩니다.</p>
+            <a href="policy-quiz.html" target="_blank" class="tool-btn primary" style="padding:12px 24px; font-size:0.96rem;">
+              🏆 퀴즈 챌린지 시작하기 ↗
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>모듈 4. 현장 실습 및 퀴즈 챌린지</span>
+        <span>연계 서비스: policy-quiz.html</span>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 22: 마무리 ==================== -->
+    <section class="slide slide-cover" data-module="m4" data-kicker="마무리" data-title="마무리 및 현장 질의응답">
+      <div style="max-width: 860px; margin: 0 auto; text-align: center; position: relative; z-index: 2;">
+        <div class="cover-pill">🎉 수고하셨습니다!</div>
+        <h2 class="cover-title" style="font-size: 2.55rem;">
+          추측이 아닌 <span>원문</span>으로,<br />
+          당원주권의 시대를 함께 엽니다
+        </h2>
+        <div class="grid-3" style="margin: 28px 0; text-align: left;">
+          <div style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.22); border-radius:14px; padding:18px;">
+            <strong style="color:#7DD3FC; display:block; margin-bottom:6px;">01. 당원의 가장 강한 무기</strong>
+            <span style="font-size:0.88rem; color:#E0F2FE;">강령·당헌·당규를 아는 당원이 정당 민주주의의 주인입니다.</span>
+          </div>
+          <div style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.22); border-radius:14px; padding:18px;">
+            <strong style="color:#7DD3FC; display:block; margin-bottom:6px;">02. 3초 만에 원문 확인</strong>
+            <span style="font-size:0.88rem; color:#E0F2FE;">헷갈릴 땐 언제든 ‘민주당헌 365 AI’로 공식 조항을 확인하세요.</span>
+          </div>
+          <div style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.22); border-radius:14px; padding:18px;">
+            <strong style="color:#7DD3FC; display:block; margin-bottom:6px;">03. 품격 있는 당원 활동</strong>
+            <span style="font-size:0.88rem; color:#E0F2FE;">명확한 규범 숙지가 이기는 정당의 출발점입니다.</span>
+          </div>
+        </div>
+        <div style="font-size: 1.15rem; font-weight: 800; color: #BAE6FD; margin-top: 10px;">
+          감사합니다 · 현장 질의응답 (Q&amp;A)을 시작하겠습니다
+        </div>
+        <div style="margin-top: 14px; font-size: 0.88rem; color: #CBD5E1;">
+          더불어민주당 울산광역시당 교육연수위원회 | 기획·제작 정우진
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================================
+       하단 내비게이션 & 프로그레스 바
+       ===================================================================== -->
+  <footer class="deck-bottombar">
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <div class="nav-controls">
+      <button type="button" id="btnPrev" class="nav-btn">← 이전</button>
+      <span class="slide-counter" id="slideCounter">01 / 22</span>
+      <button type="button" id="btnNext" class="nav-btn">다음 →</button>
+    </div>
+
+    <div class="shortcut-hint">
+      <span><kbd>←</kbd> <kbd>→</kbd> / <kbd>Space</kbd> 이동</span>
+      <span><kbd>G</kbd> 전체 목차</span>
+      <span><kbd>F</kbd> 전체화면</span>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       모달 1: 전체 슬라이드 목차 그리드
+       ===================================================================== -->
+  <div class="modal-backdrop" id="modalOverview">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h2>🗺️ 전체 슬라이드 목차 (22장)</h2>
+        <button type="button" class="modal-close" data-close-modal>✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="overview-grid" id="overviewGrid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       모달 2: 13개 실전 시나리오 상세 Q&A 카드집 (실시간 검색)
+       ===================================================================== -->
+  <div class="modal-backdrop" id="modalQaCards">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h2>📚 13개 실전 시나리오 상세 Q&amp;A 카드집</h2>
+        <button type="button" class="modal-close" data-close-modal>✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="qa-filter-bar">
+          <input type="text" id="qaSearchInput" class="qa-search-input" placeholder="키워드 검색 (예: 전적, 음주운전, 당비, 소환, 기본사회, 가산점)..." />
+        </div>
+        <div class="qa-card-list" id="qaCardList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       모달 3: 당원 현장 배포용 1장 요약 핸드아웃
+       ===================================================================== -->
+  <div class="modal-backdrop" id="modalHandout">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h2>📄 당원 현장 배포용 1장 요약 핸드아웃</h2>
+        <button type="button" class="modal-close" data-close-modal>✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="card card-blue" style="margin-bottom:14px; text-align:center;">
+          <h3 style="justify-content:center; font-size:1.2rem;">🏛️ 내 손안의 강령·당헌·당규 비서, 「민주당헌 365 AI」</h3>
+          <p>2026.08.11 최신 개정판 410쪽 · 1,264개 조항 실시간 자동 판정 (울산광역시당 교육연수위원회)</p>
+        </div>
+
+        <div class="grid-2" style="margin-bottom:14px;">
+          <div class="card">
+            <h3>📱 3단계 초간단 사용법</h3>
+            <ul class="clean-list">
+              <li><strong>① 접속하기:</strong> QR 스캔 또는 <code>/party-rules-bot</code> 접속</li>
+              <li><strong>② 질문하기:</strong> 상단 ⚡ 추천 질문 칩 클릭 또는 자유 입력</li>
+              <li><strong>③ 원문확인:</strong> 답변 속 <code>[📗 당규 제○조 ↗]</code> 클릭해 원문 대조</li>
+              <li><strong>💡 어르신 꿀팁:</strong> 상단 <strong>가+ 큰글씨 모드</strong> 활용</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>🚦 4색 신호등 판정 읽는 법</h3>
+            <ul class="clean-list">
+              <li>🟢 <strong>가능/허용:</strong> 절차에 따라 행사·신청 가능한 권리</li>
+              <li>🟡 <strong>조건부/주의:</strong> 기간·횟수 등 필수 요건 충족 필요</li>
+              <li>🔴 <strong>엄격 제한:</strong> 공천 배제·감산·징계 등 무관용 규정</li>
+              <li>📘 <strong>제도/강령:</strong> 당 기구 절차, 경선 룰, 강령 비전</li>
+            </ul>
+          </div>
+        </div>
+
+        <table class="deck-table">
+          <thead>
+            <tr>
+              <th style="width:14%;">구분</th>
+              <th style="width:36%;">자주 묻는 질문 TOP 6</th>
+              <th>핵심 결론 &amp; 근거 조항</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>전적</strong></td><td>이사·사업장 이전 시 시·도당 변경은?</td><td>🟢 증빙 + &lt;별지 제3호&gt; 전적원 제출 시 14일 내 완료 [당규 제2호 제12·14조]</td></tr>
+            <tr><td><strong>투표권</strong></td><td>권리당원 투표권 당비 조건은?</td><td>🟡 6개월 전 입당 + 12개월 내 6회 이상 정기 납부 [당헌 제5조]</td></tr>
+            <tr><td><strong>소환제</strong></td><td>선출직 당직자 당원소환 가능한가요?</td><td>🟢 중대 위반·해당행위 시 권리당원 서명으로 청구 가능 [당헌 제7조의2]</td></tr>
+            <tr><td><strong>음주·학폭</strong></td><td>음주운전·학폭·성비위 공천 자격은?</td><td>🔴 윤창호법 이후 1회, 성비위(기소유예 포함) 예외 없는 부적격 [특별당규 별표1]</td></tr>
+            <tr><td><strong>가·감산</strong></td><td>경선 가산점과 하위자 감산 룰은?</td><td>📘 여성·청년 최대 25%, 신인 10~20% 가산 / 하위 20%는 20~30% 감산 [특별당규 제16조]</td></tr>
+            <tr><td><strong>탈당·복당</strong></td><td>공천 불복 탈당자 복당 가능한가요?</td><td>🔴 3~5년 복당 제한, 특별 승인 복당 시에도 경선 25% 감산 [당헌 제84조]</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/party-rules-data.js?v=20261105_3"></script>
+  <script src="js/party-rules-lecture.js?v=20261122_1"></script>
+</body>
+</html>

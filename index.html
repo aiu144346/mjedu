@@ -62,6 +62,7 @@
           <li><a href="policy-quiz.html" style="color: #00A3E0; font-weight: 800;">정강·당헌 퀴즈 🏆</a></li>
           <li><a href="report.html" style="color: #D97706; font-weight: 800;">중앙당 보고서 📑</a></li>
           <li><a href="#creator-100">크리에이터 100인</a></li>
+          <li><a href="archive.html" style="color: #004EA2; font-weight: 800;">교육 현장 📸</a></li>
           <li><a href="#archive">아카이브·포토</a></li>
         </ul>
       </nav>
@@ -205,6 +206,16 @@
             <div class="drawer-nav-info">
               <strong class="drawer-nav-title">디지털 크리에이터 100인</strong>
               <span class="drawer-nav-desc">총선 승리를 이끌 온라인 정예 인재</span>
+            </div>
+            <span class="drawer-nav-arrow">›</span>
+          </a>
+        </li>
+        <li>
+          <a href="archive.html" class="drawer-nav-item">
+            <span class="drawer-nav-icon">📸</span>
+            <div class="drawer-nav-info">
+              <strong class="drawer-nav-title">생생 교육 현장 아카이브</strong>
+              <span class="drawer-nav-desc">지역위원회별 강좌 진행 결과 · 포토 리포트</span>
             </div>
             <span class="drawer-nav-arrow">›</span>
           </a>
@@ -1268,6 +1279,9 @@
           </p>
         </div>
 
+        <!-- 최신 지역위원회 교육 현장 리포트 (js/archive-data.js 자동 연동) -->
+        <div id="homeArchiveFeed" style="margin-bottom: 36px;"></div>
+
         <div class="archive-split">
           <!-- 좌측: 포토 갤러리 -->
           <div>
@@ -1687,6 +1701,42 @@
   </aside>
 
   <script src="js/courses-data.js"></script>
+  <script src="js/archive-data.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      const feed = document.getElementById('homeArchiveFeed');
+      const list = window.ARCHIVE_SESSIONS || [];
+      if (!feed || !list.length) return;
+      const latest = list.slice(0, 3);
+      feed.innerHTML = `
+        <div style="background:#fff; border:1.5px solid #D5E3F2; border-radius:20px; padding:26px; box-shadow:0 10px 30px rgba(0,78,162,0.07);">
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-bottom:18px;">
+            <div>
+              <span style="display:inline-block; background:#EBF4FC; color:#004EA2; font-size:0.78rem; font-weight:800; padding:4px 12px; border-radius:999px; margin-bottom:6px;">LIVE FIELD REPORT · 실시간 교육 성과</span>
+              <h3 class="text-navy-deep" style="font-size:1.35rem; font-weight:900; margin:0;">📸 지역위원회별 생생 교육 현장 리포트</h3>
+            </div>
+            <a href="archive.html" class="btn btn-outline" style="text-decoration:none; border-color:#004EA2; color:#004EA2; font-weight:800; padding:9px 16px; font-size:0.88rem;">전체 현장 아카이브 보기 →</a>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:18px;">
+            ${latest.map((s) => `
+              <a href="${s.slug || ('archive.html?id=' + s.id)}" style="display:flex; flex-direction:column; text-decoration:none; color:inherit; border:1px solid #DCE7F3; border-radius:14px; overflow:hidden; background:#F8FBFF; transition:transform 0.2s;">
+                <div style="position:relative; aspect-ratio:16/10; overflow:hidden; background:#E8F0F8;">
+                  <img src="${s.coverImage}" alt="${s.title}" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy" />
+                  <span style="position:absolute; top:10px; left:10px; background:#004EA2; color:#fff; font-size:0.75rem; font-weight:800; padding:4px 10px; border-radius:999px;">${s.regionName}</span>
+                </div>
+                <div style="padding:16px 18px; display:flex; flex-direction:column; gap:6px; flex:1;">
+                  <span style="font-size:0.8rem; font-weight:800; color:#004EA2;">📅 ${s.date}</span>
+                  <strong style="font-size:1.06rem; font-weight:900; color:#0B2559; line-height:1.35;">${s.title}</strong>
+                  <span style="font-size:0.85rem; color:#536378;">📍 ${s.location} · 👥 ${s.attendeesText}</span>
+                  <span style="margin-top:8px; font-size:0.84rem; font-weight:800; color:#004EA2;">현장 사진 ${s.photos.length}장 및 상세 리포트 보기 →</span>
+                </div>
+              </a>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    })();
+  </script>
 </body>
 </html>

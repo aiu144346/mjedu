@@ -36,7 +36,11 @@ const PRETTY_ROUTES = {
   '/policy-chat': '/party-rules-bot.html',
   '/policy-quiz': '/policy-quiz.html',
   '/ai-academy': '/ai-academy.html',
-  '/report': '/report.html'
+  '/report': '/report.html',
+  '/lecture': '/party-rules-lecture.html',
+  '/party-rules-lecture': '/party-rules-lecture.html',
+  '/archive': '/archive.html',
+  '/junggu-261121': '/archive.html'
 };
 
 function readLocalRecruitDb() {

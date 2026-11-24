@@ -45,3 +45,13 @@
   from = "/report"
   to = "/report.html"
   status = 200
+
+[[redirects]]
+  from = "/archive"
+  to = "/archive.html"
+  status = 200
+
+[[redirects]]
+  from = "/junggu-261121"
+  to = "/archive.html"
+  status = 200
