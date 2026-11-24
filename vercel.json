@@ -13,6 +13,6 @@
     { "source": "/lecture", "destination": "/party-rules-lecture.html" },
     { "source": "/party-rules-lecture", "destination": "/party-rules-lecture.html" },
     { "source": "/archive", "destination": "/archive.html" },
-    { "source": "/junggu-261121", "destination": "/archive.html" }
+    { "source": "/junggu-261121", "destination": "/archive" }
   ]
 }
