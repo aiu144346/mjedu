@@ -1,0 +1,9 @@
+node_modules/
+scratch/
+_unused_assets/
+.netlify/
+.git/
+__pycache__/
+*.py
+*.pyc
+assets/images/archive/**/*.jpg
