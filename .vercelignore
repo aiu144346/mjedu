@@ -3,6 +3,7 @@ scratch/
 _unused_assets/
 .netlify/
 .git/
+server.js
 __pycache__/
 *.py
 *.pyc

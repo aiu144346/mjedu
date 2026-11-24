@@ -1,4 +1,6 @@
 {
+  "framework": null,
+  "outputDirectory": ".",
   "cleanUrls": true,
   "rewrites": [
     { "source": "/recruit", "destination": "/recruit.html" },
@@ -8,6 +10,8 @@
     { "source": "/policy-quiz", "destination": "/policy-quiz.html" },
     { "source": "/ai-academy", "destination": "/ai-academy.html" },
     { "source": "/report", "destination": "/report.html" },
+    { "source": "/lecture", "destination": "/party-rules-lecture.html" },
+    { "source": "/party-rules-lecture", "destination": "/party-rules-lecture.html" },
     { "source": "/archive", "destination": "/archive.html" },
     { "source": "/junggu-261121", "destination": "/archive.html" }
   ]
